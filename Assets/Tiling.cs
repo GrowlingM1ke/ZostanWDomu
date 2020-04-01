@@ -11,8 +11,6 @@ public class Tiling : MonoBehaviour
 
     public bool hasARightBuddy = false;
     public bool hasALeftBuddy = false;
-    public GameObject gm;
-    private int inc = 0;
 
     public bool reverseScale = false;
 
@@ -76,7 +74,5 @@ public class Tiling : MonoBehaviour
             newBuddy.GetComponent<Tiling>().hasARightBuddy = true;
         }
 
-        if (0 == inc++)
-            gm.GetComponent<Parallaxing>().addElementToParallax(newBuddy);
     }
 }

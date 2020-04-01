@@ -5,8 +5,8 @@ using UnityEngine;
 public class Parallaxing : MonoBehaviour
 {
 
-    public List<Transform> backgrounds = new List<Transform>();
-    private List<float> parallaxScales = new List<float>();
+    public Transform[] backgrounds;
+    private float[] parallaxScales;
     public float smoothing = 1f;
 
     private Transform cam;
@@ -22,16 +22,18 @@ public class Parallaxing : MonoBehaviour
     {
         previousCamPos = cam.position;
 
-        for (int i = 0; i < backgrounds.Count; i++)
+        parallaxScales = new float[backgrounds.Length];
+
+        for (int i = 0; i < backgrounds.Length; i++)
         {
-            parallaxScales.Add(backgrounds[i].position.z * -1);
+            parallaxScales[i] = backgrounds[i].position.z * -1;
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        for (int i = 0; i < backgrounds.Count; i++)
+        for (int i = 0; i < backgrounds.Length; i++)
         {
             float parallax = (previousCamPos.x - cam.position.x) * parallaxScales[i];
 
@@ -43,11 +45,5 @@ public class Parallaxing : MonoBehaviour
         }
 
         previousCamPos = cam.position;
-    }
-
-    public void addElementToParallax(Transform t)
-    {
-        backgrounds.Add(t);
-        parallaxScales.Add(t.position.z * -1);
     }
 }
