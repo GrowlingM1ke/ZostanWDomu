@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 [RequireComponent (typeof(SpriteRenderer))]
 
 public class Tiling : MonoBehaviour
@@ -29,7 +30,7 @@ public class Tiling : MonoBehaviour
     void Start()
     {
         SpriteRenderer sRenderer = GetComponent<SpriteRenderer>();
-        spriteWidth = sRenderer.sprite.bounds.size.x;
+        spriteWidth = sRenderer.sprite.bounds.size.x * System.Math.Abs(sRenderer.transform.localScale.x);
     }
 
     // Update is called once per frame
