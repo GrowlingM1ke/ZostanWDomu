@@ -28,6 +28,10 @@ public class Tiling : MonoBehaviour
     void Start()
     {
         SpriteRenderer sRenderer = GetComponent<SpriteRenderer>();
+        if (sRenderer == null)
+        {
+            Debug.LogError("Stop HERE");
+        }
         spriteWidth = sRenderer.sprite.bounds.size.x * System.Math.Abs(sRenderer.transform.localScale.x);
     }
 
