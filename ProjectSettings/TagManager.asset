@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - gm
+  - brain
+  - brain_trigger
   layers:
   - Default
   - TransparentFX

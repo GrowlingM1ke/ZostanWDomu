@@ -17,8 +17,10 @@ namespace UnityStandardAssets._2D
         private Transform m_CeilingCheck;   // A position marking where to check for ceilings
         const float k_CeilingRadius = .01f; // Radius of the overlap circle to determine if the player can stand up
         private Animator m_Anim;            // Reference to the player's animator component.
+        private Animator b_Anim;            // Reference to brain Animator
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
+        private bool m_brain_trigger;       // See if player is stepping on the brain trigger.
 
 		private Transform playerGraphics;	// Reference to the graphics so we can change direction
 
@@ -30,6 +32,7 @@ namespace UnityStandardAssets._2D
             m_Anim = GetComponent<Animator>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
             playerGraphics = transform.Find("Graphics");
+            b_Anim = GameObject.FindGameObjectWithTag("brain").gameObject.GetComponent<Animator>();
 
         }
 
@@ -43,13 +46,20 @@ namespace UnityStandardAssets._2D
             Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
             for (int i = 0; i < colliders.Length; i++)
             {
-                if (colliders[i].gameObject != gameObject)
+                if (colliders[i].gameObject != gameObject) { 
                     m_Grounded = true;
+                    if (colliders[i].gameObject.tag == "brain_trigger")
+                        m_brain_trigger = true;
+
+                }
             }
             m_Anim.SetBool("Ground", m_Grounded);
 
             // Set the vertical animation
             m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
+
+            b_Anim.SetBool("Trigger", m_brain_trigger);
+
         }
 
 
