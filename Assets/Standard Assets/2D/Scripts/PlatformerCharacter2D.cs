@@ -32,7 +32,9 @@ namespace UnityStandardAssets._2D
             m_Anim = GetComponent<Animator>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
             playerGraphics = transform.Find("Graphics");
-            b_Anim = GameObject.FindGameObjectWithTag("brain").gameObject.GetComponent<Animator>();
+            b_Anim = null;
+            if (GameObject.FindGameObjectWithTag("brain") != null)
+                b_Anim = GameObject.FindGameObjectWithTag("brain").gameObject.GetComponent<Animator>();
 
         }
 
@@ -58,7 +60,8 @@ namespace UnityStandardAssets._2D
             // Set the vertical animation
             m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
 
-            b_Anim.SetBool("Trigger", m_brain_trigger);
+            if (b_Anim != null)
+                b_Anim.SetBool("Trigger", m_brain_trigger);
 
         }
 
