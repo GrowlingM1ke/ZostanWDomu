@@ -2,17 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class lifebar : MonoBehaviour
+public class LifeBar : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private static List<Transform> brains = new List<Transform>();
+    public static Transform brain;
+
+    private void Awake()
     {
-        
+        brain = GameObject.Find("Main Camera").transform.Find("LifeBar") as Transform;
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public static void SetLife(int num)
     {
-        
+        foreach (Transform t in brains)
+        {
+            Destroy(t.gameObject);
+        }
+        brains.Clear();
+        for (int i = 0; i < num; i++)
+        {
+            Transform sp = Instantiate(brain);
+            sp.parent = brain.parent;
+            sp.position = brain.position;
+            sp.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+            sp.position = new Vector3(sp.position.x + i * 4, sp.position.y, sp.position.z);
+            brains.Add(sp);
+        }
     }
 }
