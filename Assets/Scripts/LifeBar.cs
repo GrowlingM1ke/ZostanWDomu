@@ -10,6 +10,7 @@ public class LifeBar : MonoBehaviour
     private void Awake()
     {
         brain = GameObject.Find("Main Camera").transform.Find("LifeBar") as Transform;
+
     }
 
 
