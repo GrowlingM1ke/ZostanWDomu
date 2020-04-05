@@ -21,6 +21,10 @@ namespace UnityStandardAssets._2D
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
         private bool m_brain_trigger;       // See if player is stepping on the brain trigger.
+        public bool staminaRuch = false;
+        public Transform healthbar;
+        public float stamina = 5;
+        private bool switchControls = false;
 
 		private Transform playerGraphics;	// Reference to the graphics so we can change direction
 
@@ -66,11 +70,26 @@ namespace UnityStandardAssets._2D
             if (b_Anim != null)
                 b_Anim.SetBool("Trigger", m_brain_trigger);
 
+            // Stuff related to staminabar
+            if (staminaRuch)
+            {
+                stamina -= Time.deltaTime;
+                healthbar.gameObject.GetComponent<HealthBar>().setHealth(stamina);
+                if (stamina < 0)
+                {
+                    stamina = 5;
+                    switchControls = !switchControls;
+                }
+            }
+
         }
 
 
         public void Move(float move, bool crouch, bool jump)
         {
+            if (switchControls)
+                move = -move;
+
             if (move != 0f && !jump && GetComponent<AudioSource>().isPlaying == false)
                 GetComponent<AudioSource>().Play();
             // If crouching, check to see if the character can stand up
