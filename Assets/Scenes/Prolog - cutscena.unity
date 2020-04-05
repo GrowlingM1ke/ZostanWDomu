@@ -358,6 +358,7 @@ MonoBehaviour:
   spawnDelay: 2
   spawnPrefab: {fileID: 0}
   enemies: []
+  sluch: 0
 --- !u!1 &165950901
 GameObject:
   m_ObjectHideFlags: 0
@@ -1644,7 +1645,7 @@ Canvas:
   m_GameObject: {fileID: 873152111}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
