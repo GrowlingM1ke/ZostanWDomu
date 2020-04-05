@@ -103,7 +103,12 @@ namespace UnityStandardAssets._2D
                 move = -move;
 
             if (move != 0f && !jump && GetComponent<AudioSource>().isPlaying == false)
+            {
+                GetComponent<AudioSource>().volume = UnityEngine.Random.Range(0.3f, 1);
+                GetComponent<AudioSource>().pitch = UnityEngine.Random.Range(0.8f, 1.1f);
                 GetComponent<AudioSource>().Play();
+            }
+                
             // If crouching, check to see if the character can stand up
             if (!crouch && m_Anim.GetBool("Crouch"))
             {
@@ -145,6 +150,10 @@ namespace UnityStandardAssets._2D
             // If the player should jump...
             if (m_Grounded && jump && m_Anim.GetBool("Ground"))
             {
+                // Add Jump sound
+                GetComponents<AudioSource>()[1].volume = UnityEngine.Random.Range(0.3f, 1);
+                GetComponents<AudioSource>()[1].pitch = UnityEngine.Random.Range(0.6f, 1.1f);
+                GetComponents<AudioSource>()[1].Play();
                 // Add a vertical force to the player.
                 m_Grounded = false;
                 m_Anim.SetBool("Ground", false);
