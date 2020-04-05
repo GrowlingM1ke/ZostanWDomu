@@ -73,13 +73,25 @@ namespace UnityStandardAssets._2D
             // Stuff related to staminabar
             if (staminaRuch)
             {
-                stamina -= Time.deltaTime;
-                healthbar.gameObject.GetComponent<HealthBar>().setHealth(stamina);
-                if (stamina < 0)
+                if (!switchControls)
                 {
-                    stamina = 5;
-                    switchControls = !switchControls;
+                    stamina -= Time.deltaTime;
+                    healthbar.gameObject.GetComponent<HealthBar>().setHealth(stamina);
+                    if (stamina < 0)
+                    {
+                        switchControls = !switchControls;
+                    }
                 }
+                else
+                {
+                    stamina += Time.deltaTime;
+                    healthbar.gameObject.GetComponent<HealthBar>().setHealth(stamina);
+                    if (stamina > 5)
+                    {
+                        switchControls = !switchControls;
+                    }
+                }
+
             }
 
         }
