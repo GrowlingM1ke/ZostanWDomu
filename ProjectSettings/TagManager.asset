@@ -7,6 +7,7 @@ TagManager:
   - gm
   - brain
   - brain_trigger
+  - enemy_trigger
   layers:
   - Default
   - TransparentFX

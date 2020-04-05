@@ -24,6 +24,7 @@ public class GameMaster : MonoBehaviour
     public int spawnDelay = 2;
     public Transform spawnPrefab;
     public Transform[] enemies;
+    public bool sluch = false;
 
     public IEnumerator RespawnPlayer()
     {
@@ -36,7 +37,10 @@ public class GameMaster : MonoBehaviour
             player = GameObject.FindGameObjectWithTag("Player").transform;
         for (int i = 0; i < enemies.Length; i++)
         {
-            findPlayer(player, enemies[i]);
+            if (sluch)
+                findPlayer(player, enemies[i]);
+            else
+                findPlayer(enemies[i].gameObject.transform, enemies[i]);
             if (enemies[i].GetComponent<Enemy>().spawnPoint != null)
             {
                 enemies[i].GetComponent<AIPath>().Teleport(enemies[i].GetComponent<Enemy>().spawnPoint.position, true);
