@@ -21,6 +21,7 @@ namespace UnityStandardAssets._2D
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
         private bool m_brain_trigger;       // See if player is stepping on the brain trigger.
+        public bool staminaDotyk = false;
         public bool staminaRuch = false;
         public Transform healthbar;
         public float stamina = 5;
@@ -46,6 +47,7 @@ namespace UnityStandardAssets._2D
         private void FixedUpdate()
         {
             m_Grounded = false;
+            Mathf.Clamp(stamina, -1, 5);
 
             // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
             // This can be done using layers instead but Sample Assets will not overwrite your project settings.
@@ -60,6 +62,15 @@ namespace UnityStandardAssets._2D
                         gameObject.GetComponent<FMODUnity.StudioEventEmitter>().SetParameter("Progress", colliders[i].gameObject.GetComponent<MusicTrigger>().progress);
                     if (colliders[i].gameObject.tag == "music_trigger_wrong")
                         gameObject.GetComponent<FMODUnity.StudioEventEmitter>().SetParameter("WRONG WAY", colliders[i].gameObject.GetComponent<MusicWRONG>().wrongWay);
+                    if (colliders[i].gameObject.tag == "platform")
+                    {
+                        if (colliders[i].gameObject.GetComponent<PlatformTouch>() != null)
+                        {
+                            stamina += colliders[i].gameObject.GetComponent<PlatformTouch>().takeEffect() * Time.deltaTime;
+                            healthbar.gameObject.GetComponent<HealthBar>().setHealth(stamina);
+                        }
+                    }
+                        
                 }
             }
             m_Anim.SetBool("Ground", m_Grounded);
