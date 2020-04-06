@@ -29,6 +29,8 @@ namespace UnityStandardAssets._2D
         public float stamina = 5;
         private bool switchControls = false;
         private string changeScene = null;
+        private bool finishedLevel = false;
+        public float countdown = 0.7f;
 
 		private Transform playerGraphics;	// Reference to the graphics so we can change direction
 
@@ -49,6 +51,15 @@ namespace UnityStandardAssets._2D
 
         private void FixedUpdate()
         {
+            if (finishedLevel == true)
+            {
+                countdown -= Time.deltaTime;
+                if (countdown < 0)
+                {
+                    SceneManager.LoadScene("Tutorial_scene");
+                }
+            }
+
             m_Grounded = false;
             Mathf.Clamp(stamina, -1, 5);
 
@@ -61,11 +72,11 @@ namespace UnityStandardAssets._2D
                     m_Grounded = true;
                     if (colliders[i].gameObject.tag == "brain_trigger")
                         m_brain_trigger = true;
-                    if (colliders[i].gameObject.tag == "music_trigger")
+                    else if (colliders[i].gameObject.tag == "music_trigger")
                         gameObject.GetComponent<FMODUnity.StudioEventEmitter>().SetParameter("Progress", colliders[i].gameObject.GetComponent<MusicTrigger>().progress);
-                    if (colliders[i].gameObject.tag == "music_trigger_wrong")
+                    else if (colliders[i].gameObject.tag == "music_trigger_wrong")
                         gameObject.GetComponent<FMODUnity.StudioEventEmitter>().SetParameter("WRONG WAY", colliders[i].gameObject.GetComponent<MusicWRONG>().wrongWay);
-                    if (colliders[i].gameObject.tag == "platform")
+                    else if (colliders[i].gameObject.tag == "platform")
                     {
                         if (colliders[i].gameObject.GetComponent<PlatformTouch>() != null)
                         {
@@ -152,7 +163,18 @@ namespace UnityStandardAssets._2D
 
             if (collision.gameObject.tag == "win")
             {
-                
+                if (SceneManager.GetActiveScene().name == "Sluch_Level")
+                    GameObject.Find("Information").GetComponent<information>().finishedSluch = 2;
+                else if (SceneManager.GetActiveScene().name == "Dotyk_Level")
+                    GameObject.Find("Information").GetComponent<information>().finishedDotyk = 2;
+                else if (SceneManager.GetActiveScene().name == "Level_wzrok")
+                    GameObject.Find("Information").GetComponent<information>().finishedWzrok = 2;
+                else if (SceneManager.GetActiveScene().name == "Ruch_Level")
+                    GameObject.Find("Information").GetComponent<information>().finishedRuch = 2;
+
+                GetComponents<AudioSource>()[2].Play();
+                finishedLevel = true;
+
             }
         }
 

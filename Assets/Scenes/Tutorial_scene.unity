@@ -1083,6 +1083,7 @@ GameObject:
   - component: {fileID: 269685176}
   - component: {fileID: 269685177}
   - component: {fileID: 269685178}
+  - component: {fileID: 269685179}
   m_Layer: 0
   m_Name: Portal_dotyk
   m_TagString: sound_trigger
@@ -1143,7 +1144,7 @@ SpriteRenderer:
   m_SortingLayerID: -383023821
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1837706194089931934, guid: 75f795a22b41da34b9ed2a125c260c0e,
+  m_Sprite: {fileID: -7566596349156825625, guid: 75f795a22b41da34b9ed2a125c260c0e,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1181,6 +1182,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.572731, y: 7.0233526}
   m_EdgeRadius: 0
+--- !u!114 &269685179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269685175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3246eead442856844b73e3724790af83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secondSprite: {fileID: 1837706194089931934, guid: 75f795a22b41da34b9ed2a125c260c0e,
+    type: 3}
 --- !u!1 &297467651
 GameObject:
   m_ObjectHideFlags: 0
@@ -1712,6 +1727,10 @@ PrefabInstance:
       propertyPath: m_AirControl
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 87a2357765801c34292d6718d8b4d770, type: 3}
+      propertyPath: info
+      value: 
+      objectReference: {fileID: 2126335833}
     - target: {fileID: 21200000, guid: 87a2357765801c34292d6718d8b4d770, type: 3}
       propertyPath: m_SortingLayerID
       value: -297573205
@@ -4735,6 +4754,7 @@ GameObject:
   - component: {fileID: 1568193814}
   - component: {fileID: 1568193815}
   - component: {fileID: 1568193816}
+  - component: {fileID: 1568193817}
   m_Layer: 0
   m_Name: Portal_ruch
   m_TagString: sound_trigger
@@ -4795,7 +4815,7 @@ SpriteRenderer:
   m_SortingLayerID: -383023821
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7097388323684536484, guid: 75f795a22b41da34b9ed2a125c260c0e,
+  m_Sprite: {fileID: -6168713629118265096, guid: 75f795a22b41da34b9ed2a125c260c0e,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4833,6 +4853,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.8464413, y: 7.153014}
   m_EdgeRadius: 0
+--- !u!114 &1568193817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568193813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3246eead442856844b73e3724790af83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secondSprite: {fileID: 7097388323684536484, guid: 75f795a22b41da34b9ed2a125c260c0e,
+    type: 3}
 --- !u!1 &1666554988
 GameObject:
   m_ObjectHideFlags: 0
@@ -4844,6 +4878,7 @@ GameObject:
   - component: {fileID: 1666554989}
   - component: {fileID: 1666554990}
   - component: {fileID: 1666554991}
+  - component: {fileID: 1666554992}
   m_Layer: 0
   m_Name: Portal_wzrok
   m_TagString: sound_trigger
@@ -4904,7 +4939,7 @@ SpriteRenderer:
   m_SortingLayerID: -383023821
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4383731958758411671, guid: 75f795a22b41da34b9ed2a125c260c0e,
+  m_Sprite: {fileID: 4452162935258041603, guid: 75f795a22b41da34b9ed2a125c260c0e,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4942,6 +4977,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.4318924, y: 7.3050528}
   m_EdgeRadius: 0
+--- !u!114 &1666554992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666554988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3246eead442856844b73e3724790af83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secondSprite: {fileID: 4383731958758411671, guid: 75f795a22b41da34b9ed2a125c260c0e,
+    type: 3}
 --- !u!1 &1704866307
 GameObject:
   m_ObjectHideFlags: 0
@@ -5217,6 +5266,7 @@ GameObject:
   - component: {fileID: 1834479170}
   - component: {fileID: 1834479171}
   - component: {fileID: 1834479172}
+  - component: {fileID: 1834479173}
   m_Layer: 0
   m_Name: Portal_sluch
   m_TagString: sound_trigger
@@ -5277,7 +5327,7 @@ SpriteRenderer:
   m_SortingLayerID: -383023821
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1314341989596522288, guid: 75f795a22b41da34b9ed2a125c260c0e,
+  m_Sprite: {fileID: -8062081117328071531, guid: 75f795a22b41da34b9ed2a125c260c0e,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5315,6 +5365,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.8464355, y: 7.383936}
   m_EdgeRadius: 0
+--- !u!114 &1834479173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834479169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3246eead442856844b73e3724790af83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secondSprite: {fileID: 1314341989596522288, guid: 75f795a22b41da34b9ed2a125c260c0e,
+    type: 3}
 --- !u!1 &1844089530
 GameObject:
   m_ObjectHideFlags: 0
