@@ -30,5 +30,7 @@ public class LifeBar : MonoBehaviour
             sp.position = new Vector3(sp.position.x + i * 4, sp.position.y, sp.position.z);
             brains.Add(sp);
         }
+
+
     }
 }

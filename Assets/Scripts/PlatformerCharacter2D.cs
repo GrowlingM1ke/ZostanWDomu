@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -30,9 +31,11 @@ namespace UnityStandardAssets._2D
         private bool switchControls = false;
         private string changeScene = null;
         private bool finishedLevel = false;
+        private bool takenDamage = false;
         public float countdown = 0.7f;
+        public float countdown2 = 0.3f;
 
-		private Transform playerGraphics;	// Reference to the graphics so we can change direction
+        private Transform playerGraphics;	// Reference to the graphics so we can change direction
 
         private void Awake()
         {
@@ -51,7 +54,7 @@ namespace UnityStandardAssets._2D
 
         private void FixedUpdate()
         {
-            if (finishedLevel == true)
+            if (finishedLevel)
             {
                 countdown -= Time.deltaTime;
                 if (countdown < 0)
@@ -59,6 +62,17 @@ namespace UnityStandardAssets._2D
                     SceneManager.LoadScene("Tutorial_scene");
                 }
             }
+
+            if (takenDamage)
+            {
+                countdown2 -= Time.deltaTime;
+                if (countdown2 < 0)
+                {
+                    GameMaster.KillPlayer(gameObject.GetComponent<Player>());
+                }
+            }
+
+            
 
             m_Grounded = false;
             Mathf.Clamp(stamina, -1, 5);
@@ -68,7 +82,8 @@ namespace UnityStandardAssets._2D
             Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
             for (int i = 0; i < colliders.Length; i++)
             {
-                if (colliders[i].gameObject != gameObject) { 
+                if (colliders[i].gameObject != gameObject)
+                {
                     m_Grounded = true;
                     if (colliders[i].gameObject.tag == "brain_trigger")
                         m_brain_trigger = true;
@@ -84,6 +99,12 @@ namespace UnityStandardAssets._2D
                             healthbar.gameObject.GetComponent<HealthBar>().setHealth(stamina);
                         }
                     }
+                    else if (colliders[i].gameObject.tag == "spikes" && !GetComponents<AudioSource>()[3].isPlaying)
+                    {
+                        GetComponents<AudioSource>()[3].Play();
+                        takenDamage = true;
+                    }
+
                 }
             }
             m_Anim.SetBool("Ground", m_Grounded);
@@ -126,13 +147,13 @@ namespace UnityStandardAssets._2D
                     {
                         DontDestroyOnLoad(info);
                         SceneManager.LoadScene("Sluch_Level");
-                    }                        
+                    }
                     if (changeScene == "Portal_dotyk")
                     {
                         DontDestroyOnLoad(info);
                         SceneManager.LoadScene("Dotyk_Level");
                     }
-                        
+
                     if (changeScene == "Portal_wzrok")
                     {
                         DontDestroyOnLoad(info);
@@ -143,7 +164,7 @@ namespace UnityStandardAssets._2D
                         DontDestroyOnLoad(info);
                         SceneManager.LoadScene("Ruch_Level");
                     }
-                        
+
                 }
             }
 
@@ -193,7 +214,7 @@ namespace UnityStandardAssets._2D
                 GetComponent<AudioSource>().pitch = UnityEngine.Random.Range(0.8f, 1.1f);
                 GetComponent<AudioSource>().Play();
             }
-                
+
             // If crouching, check to see if the character can stand up
             if (!crouch && m_Anim.GetBool("Crouch"))
             {
@@ -211,13 +232,13 @@ namespace UnityStandardAssets._2D
             if (m_Grounded || m_AirControl)
             {
                 // Reduce the speed if crouching by the crouchSpeed multiplier
-                move = (crouch ? move*m_CrouchSpeed : move);
+                move = (crouch ? move * m_CrouchSpeed : move);
 
                 // The Speed animator parameter is set to the absolute value of the horizontal input.
                 m_Anim.SetFloat("Speed", Mathf.Abs(move));
 
                 // Move the character
-                m_Rigidbody2D.velocity = new Vector2(move*m_MaxSpeed, m_Rigidbody2D.velocity.y);
+                m_Rigidbody2D.velocity = new Vector2(move * m_MaxSpeed, m_Rigidbody2D.velocity.y);
 
                 // If the input is moving the player right and the player is facing left...
                 if (move > 0 && !m_FacingRight)
@@ -225,7 +246,7 @@ namespace UnityStandardAssets._2D
                     // ... flip the player.
                     Flip();
                 }
-                    // Otherwise if the input is moving the player left and the player is facing right...
+                // Otherwise if the input is moving the player left and the player is facing right...
                 else if (move < 0 && m_FacingRight)
                 {
                     // ... flip the player.
@@ -256,6 +277,20 @@ namespace UnityStandardAssets._2D
             Vector3 theScale = playerGraphics.localScale;
             theScale.x *= -1;
             playerGraphics.localScale = theScale;
+        }
+
+        public IEnumerator Waiting(float time)
+        {
+            yield return new WaitForSeconds((float)time);
+        }
+
+        public void Fallen()
+        {
+            if (!takenDamage)
+                countdown2 = 0.9f;
+            takenDamage = true;
+            if (!GetComponents<AudioSource>()[4].isPlaying)
+                GetComponents<AudioSource>()[4].Play();
         }
     }
 }

@@ -21,7 +21,7 @@ public class GameMaster : MonoBehaviour
 
     public Transform playerPrefab;
     public Transform spawnPoint;
-    public int spawnDelay = 2;
+    public float spawnDelay = 0.2f;
     public Transform spawnPrefab;
     public Transform[] enemies;
     public bool sluch = false;
