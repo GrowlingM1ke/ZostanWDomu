@@ -70,7 +70,8 @@ namespace UnityStandardAssets._2D
                             healthbar.gameObject.GetComponent<HealthBar>().setHealth(stamina);
                         }
                     }
-                        
+                    
+
                 }
             }
             m_Anim.SetBool("Ground", m_Grounded);
@@ -105,6 +106,14 @@ namespace UnityStandardAssets._2D
 
             }
 
+        }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.gameObject.tag == "sound_trigger") {
+                if (!collision.gameObject.GetComponent<AudioSource>().isPlaying)
+                    collision.gameObject.GetComponent<AudioSource>().Play();
+            }
         }
 
 

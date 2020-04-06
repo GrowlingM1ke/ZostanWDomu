@@ -8,6 +8,10 @@ TagManager:
   - brain
   - brain_trigger
   - enemy_trigger
+  - music_trigger
+  - music_trigger_wrong
+  - platform
+  - sound_trigger
   layers:
   - Default
   - TransparentFX
