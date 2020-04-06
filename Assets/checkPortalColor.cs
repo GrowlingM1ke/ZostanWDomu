@@ -8,22 +8,22 @@ public class checkPortalColor : MonoBehaviour
     public Sprite secondSprite;
     void Start()
     {
-        if (gameObject.name == "Portal_sluch" && GameObject.Find("information").GetComponent<information>().finishedSluch == 2)
+        if (gameObject.name == "Portal_sluch" && GameObject.Find("Information").GetComponent<information>().finishedSluch == 2)
         {
             gameObject.tag = "nullifier";
             gameObject.GetComponent<SpriteRenderer>().sprite = secondSprite;
         }
-        if (gameObject.name == "Portal_dotyk" && GameObject.Find("information").GetComponent<information>().finishedDotyk == 2)
+        if (gameObject.name == "Portal_dotyk" && GameObject.Find("Information").GetComponent<information>().finishedDotyk == 2)
         {
             gameObject.tag = "nullifier";
             gameObject.GetComponent<SpriteRenderer>().sprite = secondSprite;
         }
-        if (gameObject.name == "Portal_wzrok" && GameObject.Find("information").GetComponent<information>().finishedWzrok == 2)
+        if (gameObject.name == "Portal_wzrok" && GameObject.Find("Information").GetComponent<information>().finishedWzrok == 2)
         {
             gameObject.tag = "nullifier";
             gameObject.GetComponent<SpriteRenderer>().sprite = secondSprite;
         }
-        if (gameObject.name == "Portal_ruch" && GameObject.Find("information").GetComponent<information>().finishedRuch == 2)
+        if (gameObject.name == "Portal_ruch" && GameObject.Find("Information").GetComponent<information>().finishedRuch == 2)
         {
             gameObject.tag = "nullifier";
             gameObject.GetComponent<SpriteRenderer>().sprite = secondSprite;
