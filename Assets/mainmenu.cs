@@ -30,6 +30,7 @@ public class mainmenu : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse0) == true && state == 2)
         {
+            Destroy(GameObject.Find("Muzyka"));
             SceneManager.LoadScene("Prolog _cutscena");
         }
 
