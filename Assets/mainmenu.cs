@@ -30,7 +30,7 @@ public class mainmenu : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse0) == true && state == 2)
         {
-            SceneManager.LoadScene("Tutorial_scene");
+            SceneManager.LoadScene("Prolog _cutscena");
         }
 
 
