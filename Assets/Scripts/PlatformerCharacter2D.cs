@@ -59,7 +59,7 @@ namespace UnityStandardAssets._2D
                 countdown -= Time.deltaTime;
                 if (countdown < 0)
                 {
-                    SceneManager.LoadScene("Tutorial_scene");
+                    WinScene();
                 }
             }
 
@@ -291,6 +291,18 @@ namespace UnityStandardAssets._2D
             takenDamage = true;
             if (!GetComponents<AudioSource>()[4].isPlaying)
                 GetComponents<AudioSource>()[4].Play();
+        }
+
+        public void WinScene()
+        {
+            if (SceneManager.GetActiveScene().name == "Dotyk_Level")
+                SceneManager.LoadScene("Dotyk_cutscena");
+            else if (SceneManager.GetActiveScene().name == "Level_wzrok")
+                SceneManager.LoadScene("Wzrok_cutscena");
+            else if (SceneManager.GetActiveScene().name == "Ruch_Level")
+                SceneManager.LoadScene("Ruch_cutscena");
+            else if (SceneManager.GetActiveScene().name == "Sluch_Level")
+                SceneManager.LoadScene("Sluch_cutscena");
         }
     }
 }
