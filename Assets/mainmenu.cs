@@ -34,6 +34,11 @@ public class mainmenu : MonoBehaviour
             SceneManager.LoadScene("Prolog _cutscena");
         }
 
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
 
     }
 

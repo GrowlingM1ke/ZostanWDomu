@@ -15,6 +15,7 @@ TagManager:
   - nullifier
   - win
   - spikes
+  - finalDoor
   layers:
   - Default
   - TransparentFX

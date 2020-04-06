@@ -32,4 +32,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Death.unity
     guid: 831a7ba9e99f46e489a7e5908c89ba36
+  - enabled: 1
+    path: Assets/Scenes/Ending_cutscena.unity
+    guid: 5eb20030635cedf4499dee29a120cd20
+  - enabled: 1
+    path: Assets/Scenes/Wzrok_cutscena.unity
+    guid: 3fe4ca942c88b0141a502c912c5d2ca0
+  - enabled: 1
+    path: Assets/Scenes/Sluch_cutscena.unity
+    guid: 04fa4e696430632459aa9631209b8a34
+  - enabled: 1
+    path: Assets/Scenes/Dotyk_cutscena.unity
+    guid: 0d3558a160c01db4da0feffb0a60eda3
+  - enabled: 1
+    path: Assets/Scenes/Ruch_cutscena.unity
+    guid: 285680815122bc64daaf4de3f418a85b
   m_configObjects: {}

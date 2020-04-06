@@ -22,4 +22,12 @@ public class information : MonoBehaviour
     public int finishedWzrok = 0;
     public int finishedRuch = 0;
     public int finishedDotyk = 0;
+
+    public bool hasFinished()
+    {
+        if (finishedSluch + finishedWzrok + finishedWzrok + finishedRuch == 8)
+            return true;
+        else
+            return false;
+    }
 }

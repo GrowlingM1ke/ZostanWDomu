@@ -55,12 +55,39 @@ namespace UnityStandardAssets._2D
         {
             if (info == null)
                 info = GameObject.Find("Information");
+
+            if (SceneManager.GetActiveScene().name == "Tutorial_scene")
+            {
+                if (info.GetComponent<information>().hasFinished())
+                {
+                    GameObject portal = GameObject.Find("FINAL PORTAL");
+                    portal.GetComponent<SpriteRenderer>().enabled = true;
+                    portal.GetComponent<BoxCollider2D>().enabled = true;
+                }
+            }
         }
 
 
         private void FixedUpdate()
         {
-            if (finishedLevel)
+            if (stamina > 5)
+                stamina = 5f;
+
+            if (stamina < 0.1f && staminaDotyk == true) {
+                stamina = 5f;
+                GameMaster.KillPlayer(gameObject.GetComponent<Player>());
+
+            }
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                if (SceneManager.GetActiveScene().name == "Tutorial_scene")
+                    SceneManager.LoadScene("Main_Menu");
+                else
+                    SceneManager.LoadScene("Tutorial_scene");
+            }
+
+                if (finishedLevel)
             {
                 countdown -= Time.deltaTime;
                 if (countdown < 0)
@@ -145,7 +172,7 @@ namespace UnityStandardAssets._2D
 
             }
 
-            if (Input.GetKeyDown(KeyCode.UpArrow) == true)
+            if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
             {
                 if (changeScene != null)
                 {
@@ -154,21 +181,26 @@ namespace UnityStandardAssets._2D
                         DontDestroyOnLoad(info);
                         SceneManager.LoadScene("Sluch_Level");
                     }
-                    if (changeScene == "Portal_dotyk")
+                    else if (changeScene == "Portal_dotyk")
                     {
                         DontDestroyOnLoad(info);
                         SceneManager.LoadScene("Dotyk_Level");
                     }
 
-                    if (changeScene == "Portal_wzrok")
+                    else if (changeScene == "Portal_wzrok")
                     {
                         DontDestroyOnLoad(info);
                         SceneManager.LoadScene("Level_wzrok");
                     }
-                    if (changeScene == "Portal_ruch")
+                    else if (changeScene == "Portal_ruch")
                     {
                         DontDestroyOnLoad(info);
                         SceneManager.LoadScene("Ruch_Level");
+                    }
+                    else if (changeScene == "FINAL PORTAL")
+                    {
+                        DontDestroyOnLoad(info);
+                        SceneManager.LoadScene("Ending_cutscena");
                     }
 
                 }
@@ -191,13 +223,22 @@ namespace UnityStandardAssets._2D
             if (collision.gameObject.tag == "win")
             {
                 if (SceneManager.GetActiveScene().name == "Sluch_Level")
+                {
                     GameObject.Find("Information").GetComponent<information>().finishedSluch = 2;
+                }
                 else if (SceneManager.GetActiveScene().name == "Dotyk_Level")
+                {
                     GameObject.Find("Information").GetComponent<information>().finishedDotyk = 2;
+                }
+
                 else if (SceneManager.GetActiveScene().name == "Level_wzrok")
+                {
                     GameObject.Find("Information").GetComponent<information>().finishedWzrok = 2;
+                }
                 else if (SceneManager.GetActiveScene().name == "Ruch_Level")
+                {
                     GameObject.Find("Information").GetComponent<information>().finishedRuch = 2;
+                }
 
                 GetComponents<AudioSource>()[2].Play();
                 finishedLevel = true;

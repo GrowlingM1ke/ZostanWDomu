@@ -25,9 +25,10 @@ public class Enemy : MonoBehaviour
             if (colliders[i].gameObject != gameObject)
             {
                 if (colliders[i].gameObject.tag == "Player")
-                    GameMaster.KillPlayer(GameObject.FindGameObjectWithTag("Player").GetComponent<Player>());
+                    GameMaster.KillPlayer(colliders[i].gameObject.GetComponent<Player>());
 
             }
         }
     }
+
 }

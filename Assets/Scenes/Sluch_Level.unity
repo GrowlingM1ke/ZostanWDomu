@@ -869,6 +869,7 @@ GameObject:
   - component: {fileID: 72868873}
   - component: {fileID: 72868871}
   - component: {fileID: 72868874}
+  - component: {fileID: 72868875}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -1068,7 +1069,7 @@ MonoBehaviour:
   CollisionTag: 
   Event: event:/Enemy1
   PlayEvent: 1
-  StopEvent: 0
+  StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
@@ -1076,6 +1077,22 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
+--- !u!58 &72868875
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72868866}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.050984383}
+  serializedVersion: 2
+  m_Radius: 1.1173267
 --- !u!1 &74301335
 GameObject:
   m_ObjectHideFlags: 0
@@ -1841,6 +1858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d375d3ba1aaa704e8d31aecf294bd47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tutorial: 0
   playerPrefab: {fileID: 1597839209067677998, guid: 6dc744c9db598964d9dd6d48ff8e299e,
     type: 3}
   spawnPoint: {fileID: 606338058}
@@ -8154,7 +8172,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 872411626}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 217.78, y: 20.92, z: 0}
+  m_LocalPosition: {x: 217.7, y: 21.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

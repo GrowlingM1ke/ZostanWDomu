@@ -11,9 +11,10 @@ public class MovePrologue : MonoBehaviour
     void FixedUpdate()
     {
         time += Time.deltaTime;
-        if (time > 13f && time < 19.25f)
+        if (time > 13f && gameObject.transform.position.x > -17)
         {
             gameObject.transform.position = new Vector3(gameObject.transform.position.x - 6f * Time.deltaTime, gameObject.transform.position.y, gameObject.transform.position.z);
+
         }
 
         if (time > 30 || Input.GetKeyDown(KeyCode.Mouse0))

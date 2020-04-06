@@ -60,6 +60,8 @@ public class GameMaster : MonoBehaviour
     {
         Destroy(player.gameObject);
         playerLife--;
+        if (staticTutorial)
+            playerLife++;
         if (playerLife < 1)
             SceneManager.LoadScene("Death");
         if (!staticTutorial)
