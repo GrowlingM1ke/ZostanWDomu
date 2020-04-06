@@ -4,5 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Tutorial_scene.unity
+    guid: 7a97de0efdc0ec64a8f4e9632c819051
+  - enabled: 1
+    path: Assets/Scenes/Sluch_Level.unity
+    guid: d32ada7ad9d9a0745a454de910c9299d
+  - enabled: 1
+    path: Assets/Scenes/Ruch_Level.unity
+    guid: 74a7b085131e5a34b805f6a0ddbe93c1
+  - enabled: 1
+    path: Assets/Scenes/Level_wzrok.unity
+    guid: 5cb7cd04a3865f8439859b00bb59f71c
+  - enabled: 1
+    path: Assets/Scenes/Dotyk_Level.unity
+    guid: d33825e074efde643b1008e30ee44ae9
   m_configObjects: {}

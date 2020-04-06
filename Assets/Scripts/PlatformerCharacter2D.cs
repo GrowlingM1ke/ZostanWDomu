@@ -1,10 +1,12 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace UnityStandardAssets._2D
 {
     public class PlatformerCharacter2D : MonoBehaviour
     {
+        public GameObject info;
         [SerializeField] private float m_MaxSpeed = 10f;                    // The fastest the player can travel in the x axis.
         [SerializeField] private float m_JumpForce = 400f;                  // Amount of force added when the player jumps.
         [Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;  // Amount of maxSpeed applied to crouching movement. 1 = 100%
@@ -26,6 +28,7 @@ namespace UnityStandardAssets._2D
         public Transform healthbar;
         public float stamina = 5;
         private bool switchControls = false;
+        private string changeScene = null;
 
 		private Transform playerGraphics;	// Reference to the graphics so we can change direction
 
@@ -70,8 +73,6 @@ namespace UnityStandardAssets._2D
                             healthbar.gameObject.GetComponent<HealthBar>().setHealth(stamina);
                         }
                     }
-                    
-
                 }
             }
             m_Anim.SetBool("Ground", m_Grounded);
@@ -106,15 +107,57 @@ namespace UnityStandardAssets._2D
 
             }
 
+            if (Input.GetKeyDown(KeyCode.UpArrow) == true)
+            {
+                if (changeScene != null)
+                {
+                    if (changeScene == "Portal_sluch")
+                    {
+                        DontDestroyOnLoad(info);
+                        SceneManager.LoadScene("Sluch_Level");
+                    }                        
+                    if (changeScene == "Portal_dotyk")
+                    {
+                        DontDestroyOnLoad(info);
+                        SceneManager.LoadScene("Dotyk_Level");
+                    }
+                        
+                    if (changeScene == "Portal_wzrok")
+                    {
+                        DontDestroyOnLoad(info);
+                        SceneManager.LoadScene("Level_wzrok");
+                    }
+                    if (changeScene == "Portal_ruch")
+                    {
+                        DontDestroyOnLoad(info);
+                        SceneManager.LoadScene("Ruch_Level");
+                    }
+                        
+                }
+            }
+
         }
 
-        void OnCollisionEnter2D(Collision2D collision)
+        private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.gameObject.tag == "sound_trigger") {
-                if (!collision.gameObject.GetComponent<AudioSource>().isPlaying)
-                    collision.gameObject.GetComponent<AudioSource>().Play();
+            if (collision.gameObject.tag == "sound_trigger")
+            {
+                changeScene = collision.gameObject.name;
+                if (GetComponents<AudioSource>()[2].isPlaying == false)
+                    GetComponents<AudioSource>()[2].Play();
+            }
+
+            if (collision.gameObject.tag == "nullifier")
+                changeScene = null;
+
+            if (collision.gameObject.tag == "win")
+            {
+                
             }
         }
+
+
+
 
 
         public void Move(float move, bool crouch, bool jump)
@@ -171,8 +214,8 @@ namespace UnityStandardAssets._2D
             if (m_Grounded && jump && m_Anim.GetBool("Ground"))
             {
                 // Add Jump sound
-                GetComponents<AudioSource>()[1].volume = UnityEngine.Random.Range(0.3f, 1);
-                GetComponents<AudioSource>()[1].pitch = UnityEngine.Random.Range(0.6f, 1.1f);
+                GetComponents<AudioSource>()[1].volume = UnityEngine.Random.Range(0.15f, 0.5f);
+                GetComponents<AudioSource>()[1].pitch = UnityEngine.Random.Range(1.1f, 1.6f);
                 GetComponents<AudioSource>()[1].Play();
                 // Add a vertical force to the player.
                 m_Grounded = false;

@@ -12,6 +12,7 @@ TagManager:
   - music_trigger_wrong
   - platform
   - sound_trigger
+  - nullifier
   layers:
   - Default
   - TransparentFX
