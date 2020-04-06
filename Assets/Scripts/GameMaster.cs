@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using UnityEngine.SceneManagement;
 
 public class GameMaster : MonoBehaviour
 {
@@ -9,14 +10,18 @@ public class GameMaster : MonoBehaviour
 
     public static int playerLife = 3;
 
+    public bool tutorial;
+    public static bool staticTutorial;
+
     private void Start()
     {
         if (gm == null)
         {
             gm = this;
         }
-
-        LifeBar.SetLife(playerLife);
+        if (!tutorial)
+            LifeBar.SetLife(playerLife);
+        staticTutorial = tutorial;
     }
 
     public Transform playerPrefab;
@@ -55,7 +60,10 @@ public class GameMaster : MonoBehaviour
     {
         Destroy(player.gameObject);
         playerLife--;
-        LifeBar.SetLife(playerLife);
+        if (playerLife < 1)
+            SceneManager.LoadScene("Death");
+        if (!staticTutorial)
+            LifeBar.SetLife(playerLife);
         gm.StartCoroutine(gm.RespawnPlayer());
     }
 

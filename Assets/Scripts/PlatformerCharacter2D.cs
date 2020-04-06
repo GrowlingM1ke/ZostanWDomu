@@ -51,6 +51,12 @@ namespace UnityStandardAssets._2D
 
         }
 
+        public void Start()
+        {
+            if (info == null)
+                info = GameObject.Find("Information");
+        }
+
 
         private void FixedUpdate()
         {

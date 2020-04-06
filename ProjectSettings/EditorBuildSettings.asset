@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dotyk_Level.unity
     guid: d33825e074efde643b1008e30ee44ae9
+  - enabled: 1
+    path: Assets/Scenes/Death.unity
+    guid: 831a7ba9e99f46e489a7e5908c89ba36
   m_configObjects: {}
