@@ -29,19 +29,27 @@ public class PlatformTouch : MonoBehaviour
         {
             timer = Maxtime;
             inc += Random.Range(0, 2) == 0 ? -1 : 1;
-            state = Mathf.Abs(inc % 3);
+            state = Mathf.Abs(inc % 5);
 
             switch (state)
             {
                 case 0:
+                    gameObject.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0);
+                    effect = damage;
+                    break;
+                case 1:
                     gameObject.GetComponent<SpriteRenderer>().color = new Color(114, 226, 0);
                     effect = heal;
                     break;
-                case 1:
+                case 2:
+                    gameObject.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0);
+                    effect = damage;
+                    break;
+                case 3:
                     gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255);
                     effect = 0;
                     break;
-                case 2:
+                case 4:
                     gameObject.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0);
                     effect = damage;
                     break;
@@ -60,6 +68,6 @@ public class PlatformTouch : MonoBehaviour
 
     public IEnumerator randStart()
     {
-        yield return new WaitForSeconds(Random.Range(0f, 4f));
+        yield return new WaitForSeconds(Random.Range(0f, 15f));
     }
 }
