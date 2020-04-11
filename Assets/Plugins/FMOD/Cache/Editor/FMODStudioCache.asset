@@ -51,6 +51,40 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &-8849642139104112807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music DOTYK/Progress
+  m_EditorClassIdentifier: 
+  Name: Progress
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
+--- !u!114 &-8730490962643734036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music RUCH/Progress
+  m_EditorClassIdentifier: 
+  Name: Progress
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
 --- !u!114 &-8646789723835502460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,6 +108,48 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 6125
+--- !u!114 &-8608480502561814645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music WZROK/HP
+  m_EditorClassIdentifier: 
+  Name: HP
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
+--- !u!114 &-8402757427268051432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music RUCH
+  m_EditorClassIdentifier: 
+  Path: event:/Music RUCH
+  guid: 0581a356556ff440a1ed9525736a68a0
+  Banks:
+  - {fileID: -2915535334713569021}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -8730490962643734036}
+  - {fileID: 3721273395105376330}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 67764
 --- !u!114 &-8055692466995316006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -687,6 +763,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &-3219450440494190083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music SLUCH/WRONG WAY
+  m_EditorClassIdentifier: 
+  Name: WRONG WAY
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
 --- !u!114 &-3196108738383207747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -704,6 +797,58 @@ MonoBehaviour:
   Max: 100
   Default: 0
   Exists: 0
+--- !u!114 &-3002988481963568969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music ZERO/Go to
+  m_EditorClassIdentifier: 
+  Name: Go to
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-2961719768610453265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music SLUCH/Progress
+  m_EditorClassIdentifier: 
+  Name: Progress
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
+--- !u!114 &-2915535334713569021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../../Fmod/Zostan w domu/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637217857629463165
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-2826865195507746404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -824,6 +969,46 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1170
   Exists: 1
+--- !u!114 &-1394187987755215822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player footsteps
+  m_EditorClassIdentifier: 
+  Path: event:/Player footsteps
+  guid: 358561dd2d3d124cb2bda1946e690e3e
+  Banks:
+  - {fileID: -2915535334713569021}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 375
+--- !u!114 &-1386648743721520638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music SLUCH/HP
+  m_EditorClassIdentifier: 
+  Name: HP
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
 --- !u!114 &-1254139873065954623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -875,6 +1060,26 @@ MonoBehaviour:
   Max: 100
   Default: 0
   Exists: 0
+--- !u!114 &-936570810463560043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: ../../Fmod/Zostan w domu/Build/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637217857629513036
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1170
+  Exists: 1
 --- !u!114 &-935045636567028451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -926,6 +1131,29 @@ MonoBehaviour:
   Max: 100
   Default: 0
   Exists: 0
+--- !u!114 &-687410315090829978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemy1
+  m_EditorClassIdentifier: 
+  Path: event:/Enemy1
+  guid: 8cdb166579e0f74ea53e5a3db2152976
+  Banks:
+  - {fileID: -2915535334713569021}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 6125
 --- !u!114 &-487384153909983235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -995,6 +1223,30 @@ MonoBehaviour:
   Max: 100
   Default: 0
   Exists: 1
+--- !u!114 &-136229550327370440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music ZERO
+  m_EditorClassIdentifier: 
+  Path: event:/Music ZERO
+  guid: ec8124863ee3464b9c02a7b5077042e7
+  Banks:
+  - {fileID: -2915535334713569021}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -3002988481963568969}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 45176
 --- !u!114 &-7302464452683988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1026,21 +1278,21 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 6098138624227031481}
-  - {fileID: 760277276349626858}
+  - {fileID: -936570810463560043}
+  - {fileID: -2915535334713569021}
   EditorEvents:
-  - {fileID: -7470373282358687031}
-  - {fileID: 8442992897310792284}
-  - {fileID: -7204472439089349353}
-  - {fileID: -4332002100713025829}
-  - {fileID: 1292973408779907379}
-  - {fileID: -4819613700547316890}
-  - {fileID: 2696507837720385003}
+  - {fileID: -8402757427268051432}
+  - {fileID: -1394187987755215822}
+  - {fileID: 272488349332590608}
+  - {fileID: 5645055861057880316}
+  - {fileID: -687410315090829978}
+  - {fileID: 6926191010955060538}
+  - {fileID: -136229550327370440}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 760277276349626858}
+  - {fileID: -2915535334713569021}
   StringsBanks:
-  - {fileID: 6098138624227031481}
+  - {fileID: -936570810463560043}
   stringsBankWriteTime: 637217857629513036
   cacheVersion: 3
 --- !u!114 &189633562282914090
@@ -1077,6 +1329,31 @@ MonoBehaviour:
   Max: 100
   Default: 0
   Exists: 0
+--- !u!114 &272488349332590608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music DOTYK
+  m_EditorClassIdentifier: 
+  Path: event:/Music DOTYK
+  guid: 56e8df6a857bf446855b188b04f6b765
+  Banks:
+  - {fileID: -2915535334713569021}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 9079941727966568381}
+  - {fileID: -8849642139104112807}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 67764
 --- !u!114 &417086003963822462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1388,6 +1665,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 4235
+--- !u!114 &3721273395105376330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music RUCH/HP
+  m_EditorClassIdentifier: 
+  Name: HP
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
 --- !u!114 &3978406846412294862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1567,6 +1861,32 @@ MonoBehaviour:
   Max: 100
   Default: 0
   Exists: 0
+--- !u!114 &5645055861057880316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music SLUCH
+  m_EditorClassIdentifier: 
+  Path: event:/Music SLUCH
+  guid: 697e8589c4c19c46a451c869ce27750d
+  Banks:
+  - {fileID: -2915535334713569021}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -1386648743721520638}
+  - {fileID: -3219450440494190083}
+  - {fileID: -2961719768610453265}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 67764
 --- !u!114 &5660004329404810508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1706,6 +2026,31 @@ MonoBehaviour:
   Max: 100
   Default: 0
   Exists: 1
+--- !u!114 &6926191010955060538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music WZROK
+  m_EditorClassIdentifier: 
+  Path: event:/Music WZROK
+  guid: e3062c4aae87c248bc31be49d7f36aba
+  Banks:
+  - {fileID: -2915535334713569021}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -8608480502561814645}
+  - {fileID: 9000369718415614197}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 67764
 --- !u!114 &7273727628090807540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1948,6 +2293,23 @@ MonoBehaviour:
   Max: 100
   Default: 0
   Exists: 1
+--- !u!114 &9000369718415614197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music WZROK/Progress
+  m_EditorClassIdentifier: 
+  Name: Progress
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
 --- !u!114 &9006280873036005450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1965,3 +2327,20 @@ MonoBehaviour:
   Max: 100
   Default: 0
   Exists: 0
+--- !u!114 &9079941727966568381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music DOTYK/HP
+  m_EditorClassIdentifier: 
+  Name: HP
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
