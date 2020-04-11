@@ -94,8 +94,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 1238
+      x: 1652
+      y: 3300
       width: 67
       height: 620
     spriteID: 3543dcf80bc7b7747b20740fc3c98362
@@ -108,7 +108,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -116, y: 788}
+    uvTransform: {x: 1446, y: 2737}
   - name: spikes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -116,8 +116,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1776
-      y: 559
+      x: 1240
+      y: 3755
       width: 190
       height: 93
     spriteID: 32bc0bdd17d92e74ebc5eac0dcd1aeb3
@@ -130,7 +130,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1046, y: 77}
+    uvTransform: {x: 424, y: 3160}
   - name: platform_long
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -139,7 +139,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 4
+      y: 1404
       width: 1920
       height: 547
     spriteID: e66df9bde4a5fc248b161ff75fdb174d
@@ -152,7 +152,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 4, y: 0}
+    uvTransform: {x: -82, y: 1287}
   - name: flying_platform_02
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -161,7 +161,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 559
+      y: 1959
       width: 1092
       height: 404
     spriteID: 1a2dca24da3519d48836646b673d0c7a
@@ -174,7 +174,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -824, y: 121}
+    uvTransform: {x: -847, y: 1831}
   - name: flying platform_01
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -182,8 +182,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1104
-      y: 559
+      x: 1143
+      y: 1959
       width: 664
       height: 380
     spriteID: b0ca0eb3715af0147aa6d95fcf916aca
@@ -196,7 +196,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 757, y: -108}
+    uvTransform: {x: -32, y: 1737}
   - name: flying platform_00
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -204,8 +204,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 971
+      x: 1240
+      y: 3033
       width: 862
       height: 259
     spriteID: 676f053b68c241d4c960b4b54d8373aa
@@ -218,7 +218,425 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -119, y: 496}
+    uvTransform: {x: 1065, y: 2748}
+  - name: dotyk
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1652
+      y: 3928
+      width: 26
+      height: 70
+    spriteID: c081dfea5e3b7d242a1d55e9ad551c56
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1075, y: 2953}
+  - name: "s\u0142uch "
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1536
+      y: 3755
+      width: 77
+      height: 79
+    spriteID: 9367f6a201921474dbac3798910426fa
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 968, y: 2740}
+  - name: wzrok
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1438
+      y: 3755
+      width: 90
+      height: 90
+    spriteID: c3c6b335974660646b353a393ef7e655
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 877, y: 2745}
+  - name: 'ruch '
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 299
+      y: 3951
+      width: 100
+      height: 101
+    spriteID: 27c9feaa2cfb799438d57a36f3fd35f4
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -264, y: 2944}
+  - name: Portal_dotyk_on
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2371
+      width: 404
+      height: 654
+    spriteID: f9413660a73ec2b4cb8929a2afc339f4
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -880, y: 2185}
+  - name: Portal_dotyk_off
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 2371
+      width: 404
+      height: 654
+    spriteID: fc6eb51a6e2d7754e94b5e3edb28f481
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -165, y: 2182}
+  - name: "Portal_s\u0142uch_on"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 828
+      y: 2371
+      width: 404
+      height: 654
+    spriteID: e53ec9cc44218f848a3aad8a2fe0e4f3
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -764, y: 1848}
+  - name: "Portal_s\u0142uch_off"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1240
+      y: 2371
+      width: 404
+      height: 654
+    spriteID: 25fb958272366094299944fcda476b26
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -117, y: 1848}
+  - name: Portal_wzrok_on
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1652
+      y: 2371
+      width: 404
+      height: 654
+    spriteID: 958519ad2549bf849991540d59aa3150
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 611, y: 1848}
+  - name: Portal_wzrok_off
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3033
+      width: 404
+      height: 654
+    spriteID: 65cd2a310dd093541997a559759f513b
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -740, y: 2514}
+  - name: Portal_ruch_on
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 3033
+      width: 404
+      height: 654
+    spriteID: 8493e06bcad752047bca9bab42e56444
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 14, y: 2518}
+  - name: Portal_ruch_off
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 828
+      y: 3033
+      width: 404
+      height: 654
+    spriteID: ff464404dbf41a445ab8deb59acd77d1
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 741, y: 2510}
+  - name: background_main
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 2108
+      height: 1392
+    spriteID: 2c9aa2b84671ffb41936be9b23a515a0
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 4}
+  - name: portal_01
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1240
+      y: 3300
+      width: 404
+      height: 447
+    spriteID: ddf5469d5caa00b41a907471452ee5a4
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 839, y: 2570}
+  - name: Layer 3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3951
+      width: 287
+      height: 112
+    spriteID: c084461f89c42a343912e1d7ca2fb980
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -450, y: 3079}
+  - name: Layer 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1815
+      y: 1959
+      width: 173
+      height: 370
+    spriteID: 56200f48a81dec54fac90a09b2e35baf
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1296, y: 1436}
+  - name: dotyk_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1652
+      y: 4006
+      width: 26
+      height: 70
+    spriteID: 7cb157c8ba8fdd94a8ad1e335956027c
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1061, y: 2978}
+  - name: "s\u0142uch"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 259
+      y: 3695
+      width: 77
+      height: 79
+    spriteID: 55e3c688d59a3ab4d8c8650f8406d208
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -309, y: 2680}
+  - name: Layer 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3695
+      width: 247
+      height: 248
+    spriteID: e00c254d492771045b5460d8348f2c46
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -476, y: 2766}
   platformSettings: []
   mosaicLayers: 1
   documentPivot: {x: 0, y: 0}
@@ -226,60 +644,228 @@ ScriptedImporter:
   importHiddenLayers: 0
   importedTextureWidth: 2048
   importedTextureHeight: 2048
-  documentSize: {x: 1920, y: 1080}
+  documentSize: {x: 2108, y: 1392}
   paperDollMode: 0
   keepDupilcateSpriteName: 0
   spriteCategoryList:
     categories: []
-  textureActualWidth: 2048
-  textureActualHeight: 2048
+  textureActualWidth: 4096
+  textureActualHeight: 4096
   spritePackingTag: 
   resliceFromLayer: 0
   characterMode: 1
   mosaicPSDLayers: []
   rigPSDLayers:
+  - name: Portals and platforms
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 00000000000000000000000000000000
+    layerID: 194
+    mosaicPosition: {x: 0, y: 0}
+  - name: dotyk
+    spriteName: dotyk
+    isGroup: 0
+    parentIndex: 0
+    spriteID: c081dfea5e3b7d242a1d55e9ad551c56
+    layerID: 191
+    mosaicPosition: {x: 1652, y: 3928}
+  - name: "s\u0142uch "
+    spriteName: "s\u0142uch "
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 9367f6a201921474dbac3798910426fa
+    layerID: 190
+    mosaicPosition: {x: 1536, y: 3755}
+  - name: wzrok
+    spriteName: wzrok
+    isGroup: 0
+    parentIndex: 0
+    spriteID: c3c6b335974660646b353a393ef7e655
+    layerID: 189
+    mosaicPosition: {x: 1438, y: 3755}
+  - name: 'ruch '
+    spriteName: 'ruch '
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 27c9feaa2cfb799438d57a36f3fd35f4
+    layerID: 188
+    mosaicPosition: {x: 299, y: 3951}
+  - name: Portal_dotyk_1
+    spriteName: Portal_dotyk_1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: f9413660a73ec2b4cb8929a2afc339f4
+    layerID: 163
+    mosaicPosition: {x: 4, y: 2371}
+  - name: Portal_dotyk_0
+    spriteName: Portal_dotyk_0
+    isGroup: 0
+    parentIndex: 0
+    spriteID: fc6eb51a6e2d7754e94b5e3edb28f481
+    layerID: 136
+    mosaicPosition: {x: 416, y: 2371}
+  - name: "Portal_s\u0142uch_1"
+    spriteName: "Portal_s\u0142uch_1"
+    isGroup: 0
+    parentIndex: 0
+    spriteID: e53ec9cc44218f848a3aad8a2fe0e4f3
+    layerID: 117
+    mosaicPosition: {x: 828, y: 2371}
+  - name: "Portal_s\u0142uch_0"
+    spriteName: "Portal_s\u0142uch_0"
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 25fb958272366094299944fcda476b26
+    layerID: 94
+    mosaicPosition: {x: 1240, y: 2371}
+  - name: Portal_wzrok_1
+    spriteName: Portal_wzrok_1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 958519ad2549bf849991540d59aa3150
+    layerID: 79
+    mosaicPosition: {x: 1652, y: 2371}
+  - name: Portal_wzrok_0
+    spriteName: Portal_wzrok_0
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 65cd2a310dd093541997a559759f513b
+    layerID: 57
+    mosaicPosition: {x: 4, y: 3033}
+  - name: Portal_ruch_1
+    spriteName: Portal_ruch_1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 8493e06bcad752047bca9bab42e56444
+    layerID: 48
+    mosaicPosition: {x: 416, y: 3033}
+  - name: Portal_ruch_0
+    spriteName: Portal_ruch_0
+    isGroup: 0
+    parentIndex: 0
+    spriteID: ff464404dbf41a445ab8deb59acd77d1
+    layerID: 38
+    mosaicPosition: {x: 828, y: 3033}
   - name: wall
     spriteName: wall
     isGroup: 0
-    parentIndex: -1
+    parentIndex: 0
     spriteID: 3543dcf80bc7b7747b20740fc3c98362
     layerID: 23
-    mosaicPosition: {x: 4, y: 1238}
+    mosaicPosition: {x: 1652, y: 3300}
   - name: spikes
     spriteName: spikes
     isGroup: 0
-    parentIndex: -1
+    parentIndex: 0
     spriteID: 32bc0bdd17d92e74ebc5eac0dcd1aeb3
     layerID: 11
-    mosaicPosition: {x: 1776, y: 559}
+    mosaicPosition: {x: 1240, y: 3755}
   - name: platform_long
     spriteName: platform_long
     isGroup: 0
-    parentIndex: -1
+    parentIndex: 0
     spriteID: e66df9bde4a5fc248b161ff75fdb174d
     layerID: 21
-    mosaicPosition: {x: 4, y: 4}
+    mosaicPosition: {x: 4, y: 1404}
   - name: flying_platform_02
     spriteName: flying_platform_02
     isGroup: 0
-    parentIndex: -1
+    parentIndex: 0
     spriteID: 1a2dca24da3519d48836646b673d0c7a
     layerID: 17
-    mosaicPosition: {x: 4, y: 559}
+    mosaicPosition: {x: 4, y: 1959}
   - name: flying platform_01
     spriteName: flying platform_01
     isGroup: 0
-    parentIndex: -1
+    parentIndex: 0
     spriteID: b0ca0eb3715af0147aa6d95fcf916aca
     layerID: 14
-    mosaicPosition: {x: 1104, y: 559}
+    mosaicPosition: {x: 1143, y: 1959}
   - name: flying platform_00
     spriteName: flying platform_00
     isGroup: 0
-    parentIndex: -1
+    parentIndex: 0
     spriteID: 676f053b68c241d4c960b4b54d8373aa
     layerID: 13
-    mosaicPosition: {x: 4, y: 971}
+    mosaicPosition: {x: 1240, y: 3033}
+  - name: Portal_01_backup
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 00000000000000000000000000000000
+    layerID: 186
+    mosaicPosition: {x: 0, y: 0}
+  - name: background_main
+    spriteName: background_main
+    isGroup: 0
+    parentIndex: 19
+    spriteID: 2c9aa2b84671ffb41936be9b23a515a0
+    layerID: 2
+    mosaicPosition: {x: 4, y: 4}
+  - name: Group 2
+    spriteName: 
+    isGroup: 1
+    parentIndex: 19
+    spriteID: 00000000000000000000000000000000
+    layerID: 192
+    mosaicPosition: {x: 0, y: 0}
+  - name: portal_01
+    spriteName: portal_01
+    isGroup: 0
+    parentIndex: 21
+    spriteID: ddf5469d5caa00b41a907471452ee5a4
+    layerID: 185
+    mosaicPosition: {x: 1240, y: 3300}
+  - name: Layer 3
+    spriteName: Layer 3
+    isGroup: 0
+    parentIndex: 21
+    spriteID: c084461f89c42a343912e1d7ca2fb980
+    layerID: 184
+    mosaicPosition: {x: 4, y: 3951}
+  - name: Layer 2
+    spriteName: Layer 2
+    isGroup: 0
+    parentIndex: 21
+    spriteID: 56200f48a81dec54fac90a09b2e35baf
+    layerID: 183
+    mosaicPosition: {x: 1815, y: 1959}
+  - name: Group 1
+    spriteName: 
+    isGroup: 1
+    parentIndex: 21
+    spriteID: 00000000000000000000000000000000
+    layerID: 182
+    mosaicPosition: {x: 0, y: 0}
+  - name: dotyk
+    spriteName: dotyk_1
+    isGroup: 0
+    parentIndex: 25
+    spriteID: 7cb157c8ba8fdd94a8ad1e335956027c
+    layerID: 180
+    mosaicPosition: {x: 1652, y: 4006}
+  - name: III
+    spriteName: 
+    isGroup: 1
+    parentIndex: 21
+    spriteID: 00000000000000000000000000000000
+    layerID: 178
+    mosaicPosition: {x: 0, y: 0}
+  - name: "s\u0142uch"
+    spriteName: "s\u0142uch"
+    isGroup: 0
+    parentIndex: 27
+    spriteID: 55e3c688d59a3ab4d8c8650f8406d208
+    layerID: 176
+    mosaicPosition: {x: 259, y: 3695}
+  - name: Layer 1
+    spriteName: Layer 1
+    isGroup: 0
+    parentIndex: 21
+    spriteID: e00c254d492771045b5460d8348f2c46
+    layerID: 165
+    mosaicPosition: {x: 4, y: 3695}
   characterData:
     bones: []
     parts: []
