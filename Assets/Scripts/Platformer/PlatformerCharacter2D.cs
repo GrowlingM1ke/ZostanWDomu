@@ -67,6 +67,52 @@ namespace UnityStandardAssets._2D
             }
         }
 
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
+            {
+                if (changeScene != null)
+                {
+                    if (changeScene == "Portal_sluch")
+                    {
+                        DontDestroyOnLoad(info);
+                        SceneManager.LoadScene("Sluch_Level");
+                    }
+                    else if (changeScene == "Portal_dotyk")
+                    {
+                        DontDestroyOnLoad(info);
+                        SceneManager.LoadScene("Dotyk_Level");
+                    }
+
+                    else if (changeScene == "Portal_wzrok")
+                    {
+                        DontDestroyOnLoad(info);
+                        SceneManager.LoadScene("Level_wzrok");
+                    }
+                    else if (changeScene == "Portal_ruch")
+                    {
+                        DontDestroyOnLoad(info);
+                        SceneManager.LoadScene("Ruch_Level");
+                    }
+                    else if (changeScene == "FINAL PORTAL")
+                    {
+                        DontDestroyOnLoad(info);
+                        SceneManager.LoadScene("Ending_cutscena");
+                    }
+
+                }
+            }
+
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                if (SceneManager.GetActiveScene().name == "Tutorial_scene")
+                    SceneManager.LoadScene("Main_Menu");
+                else
+                    SceneManager.LoadScene("Tutorial_scene");
+            }
+
+        }
 
         private void FixedUpdate()
         {
@@ -77,14 +123,6 @@ namespace UnityStandardAssets._2D
                 stamina = 5f;
                 GameMaster.KillPlayer(gameObject.GetComponent<Player>());
 
-            }
-
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                if (SceneManager.GetActiveScene().name == "Tutorial_scene")
-                    SceneManager.LoadScene("Main_Menu");
-                else
-                    SceneManager.LoadScene("Tutorial_scene");
             }
 
                 if (finishedLevel)
@@ -171,54 +209,29 @@ namespace UnityStandardAssets._2D
                 }
 
             }
+        }
 
-            if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
+        private void OnTriggerStay2D(Collider2D collision)
+        {
+            if (collision.gameObject.tag == "portal")
             {
-                if (changeScene != null)
-                {
-                    if (changeScene == "Portal_sluch")
-                    {
-                        DontDestroyOnLoad(info);
-                        SceneManager.LoadScene("Sluch_Level");
-                    }
-                    else if (changeScene == "Portal_dotyk")
-                    {
-                        DontDestroyOnLoad(info);
-                        SceneManager.LoadScene("Dotyk_Level");
-                    }
-
-                    else if (changeScene == "Portal_wzrok")
-                    {
-                        DontDestroyOnLoad(info);
-                        SceneManager.LoadScene("Level_wzrok");
-                    }
-                    else if (changeScene == "Portal_ruch")
-                    {
-                        DontDestroyOnLoad(info);
-                        SceneManager.LoadScene("Ruch_Level");
-                    }
-                    else if (changeScene == "FINAL PORTAL")
-                    {
-                        DontDestroyOnLoad(info);
-                        SceneManager.LoadScene("Ending_cutscena");
-                    }
-
-                }
+                changeScene = collision.gameObject.name;
             }
+        }
 
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+            if (collision.gameObject.tag == "portal")
+                changeScene = null;
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.gameObject.tag == "sound_trigger")
+            if (collision.gameObject.tag == "portal")
             {
-                changeScene = collision.gameObject.name;
                 if (GetComponents<AudioSource>()[2].isPlaying == false)
                     GetComponents<AudioSource>()[2].Play();
             }
-
-            if (collision.gameObject.tag == "nullifier")
-                changeScene = null;
 
             if (collision.gameObject.tag == "win")
             {
@@ -255,9 +268,9 @@ namespace UnityStandardAssets._2D
             if (switchControls)
                 move = -move;
 
-            if (move != 0f && !jump && GetComponent<AudioSource>().isPlaying == false)
+            if (move != 0f && !jump && GetComponent<AudioSource>().isPlaying == false && m_Grounded)
             {
-                GetComponent<AudioSource>().volume = UnityEngine.Random.Range(0.3f, 1);
+                GetComponent<AudioSource>().volume = UnityEngine.Random.Range(0.3f, 0.6f);
                 GetComponent<AudioSource>().pitch = UnityEngine.Random.Range(0.8f, 1.1f);
                 GetComponent<AudioSource>().Play();
             }
@@ -297,7 +310,7 @@ namespace UnityStandardAssets._2D
                 else if (move < 0 && m_FacingRight)
                 {
                     // ... flip the player.
-                    Flip();
+                       Flip();
                 }
             }
             // If the player should jump...

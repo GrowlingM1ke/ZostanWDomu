@@ -16,6 +16,7 @@ TagManager:
   - win
   - spikes
   - finalDoor
+  - portal
   layers:
   - Default
   - TransparentFX

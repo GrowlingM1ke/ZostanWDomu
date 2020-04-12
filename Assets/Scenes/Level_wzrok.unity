@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 21694966}
   - component: {fileID: 21694968}
   - component: {fileID: 21694967}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemySP
   m_TagString: enemy_trigger
   m_Icon: {fileID: 0}
@@ -9444,7 +9444,7 @@ SpriteRenderer:
   m_Size: {x: 2, y: 2.02}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &554225849
@@ -10334,7 +10334,7 @@ GameObject:
   - component: {fileID: 631055536}
   - component: {fileID: 631055538}
   - component: {fileID: 631055537}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemySP (2)
   m_TagString: enemy_trigger
   m_Icon: {fileID: 0}
@@ -10990,7 +10990,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 670624632}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11635,7 +11635,7 @@ GameObject:
   - component: {fileID: 706254645}
   - component: {fileID: 706254647}
   - component: {fileID: 706254646}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemySP (7)
   m_TagString: enemy_trigger
   m_Icon: {fileID: 0}
@@ -11650,7 +11650,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 706254644}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.33, y: 301.3, z: -20.21168}
+  m_LocalPosition: {x: -7.08, y: 301.8, z: -20.21168}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 140429020}
@@ -11682,7 +11682,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -9.580753, y: -0.45713997}
+  m_Offset: {x: 5.985715, y: -0.864975}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -11693,7 +11693,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 17.800056, y: 1.9142799}
+  m_Size: {x: 15.213015, y: 5.449005}
   m_EdgeRadius: 0
 --- !u!1 &711621324
 GameObject:
@@ -22546,7 +22546,7 @@ GameObject:
   - component: {fileID: 1505985872}
   - component: {fileID: 1505985874}
   - component: {fileID: 1505985873}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemySP (6)
   m_TagString: enemy_trigger
   m_Icon: {fileID: 0}
@@ -22920,7 +22920,7 @@ GameObject:
   - component: {fileID: 1521880462}
   - component: {fileID: 1521880464}
   - component: {fileID: 1521880463}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemySP (8)
   m_TagString: enemy_trigger
   m_Icon: {fileID: 0}
@@ -23715,7 +23715,7 @@ GameObject:
   - component: {fileID: 1575480901}
   - component: {fileID: 1575480903}
   - component: {fileID: 1575480902}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemySP (5)
   m_TagString: enemy_trigger
   m_Icon: {fileID: 0}
@@ -26193,7 +26193,7 @@ GameObject:
   - component: {fileID: 1770331276}
   - component: {fileID: 1770331278}
   - component: {fileID: 1770331277}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemySP (3)
   m_TagString: enemy_trigger
   m_Icon: {fileID: 0}
@@ -26652,7 +26652,7 @@ GameObject:
   - component: {fileID: 1793463343}
   - component: {fileID: 1793463345}
   - component: {fileID: 1793463344}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemySP (4)
   m_TagString: enemy_trigger
   m_Icon: {fileID: 0}
@@ -30292,7 +30292,7 @@ GameObject:
   - component: {fileID: 2019856038}
   - component: {fileID: 2019856040}
   - component: {fileID: 2019856039}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemySP (1)
   m_TagString: enemy_trigger
   m_Icon: {fileID: 0}
