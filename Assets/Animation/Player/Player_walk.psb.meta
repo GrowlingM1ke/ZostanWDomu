@@ -89,13 +89,13 @@ ScriptedImporter:
   rigSpriteImportData:
   - name: 8
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.52633244, y: 0.48595604}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 4
+      x: 10
+      y: 7
       width: 110
       height: 165
     spriteID: 2d91de878826b6440a0dcc3652f0ad4b
@@ -111,8 +111,8 @@ ScriptedImporter:
     uvTransform: {x: -25, y: -6}
   - name: 7
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.4872678, y: 0.5000006}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -177,8 +177,8 @@ ScriptedImporter:
     uvTransform: {x: 178, y: -9}
   - name: 4
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.5684648, y: 0.496489}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -199,8 +199,8 @@ ScriptedImporter:
     uvTransform: {x: -25, y: 167}
   - name: 3
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.4872678, y: 0.496446}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -221,12 +221,12 @@ ScriptedImporter:
     uvTransform: {x: 277, y: 164}
   - name: 2
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.4939018, y: 0.5000002}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 122
+      x: 123
       y: 175
       width: 95
       height: 163
@@ -243,8 +243,8 @@ ScriptedImporter:
     uvTransform: {x: 78, y: 163}
   - name: 1
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.4874062, y: 0.5000002}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
