@@ -5963,5 +5963,10 @@ PrefabInstance:
       propertyPath: info
       value: 
       objectReference: {fileID: 2126335833}
+    - target: {fileID: 3609348367771833131, guid: 2f564b12f23345d46b969d2c16d94766,
+        type: 3}
+      propertyPath: m_WhatIsGround.m_Bits
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f564b12f23345d46b969d2c16d94766, type: 3}
