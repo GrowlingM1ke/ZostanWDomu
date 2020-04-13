@@ -14,6 +14,19 @@ namespace UnityStandardAssets._2D
         [SerializeField] private bool m_AirControl = false;                 // Whether or not a player can steer while jumping;
         [SerializeField] private LayerMask m_WhatIsGround;                  // A mask determining what is ground to the character
 
+
+
+        // Stuff related to sound
+        public AudioSource audioSource;
+        public AudioSource externAudioSource;
+        public AudioClip screamSound;
+        public AudioClip painSound;
+        public AudioClip jumpSound;
+        public AudioClip walkSound;
+        public AudioClip portalSound;
+        public AudioClip winSound;
+
+
         private Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
         const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
         private bool m_Grounded;            // Whether or not the player is grounded.
@@ -158,7 +171,7 @@ namespace UnityStandardAssets._2D
                     m_Grounded = true;
                     if (colliders[i].gameObject.tag == "brain_trigger")
                         m_brain_trigger = true;
-                    else if (colliders[i].gameObject.tag == "music_trigger")
+                    else if (colliders[i].gameObject.tag == "music_trigger") 
                         gameObject.GetComponent<FMODUnity.StudioEventEmitter>().SetParameter("Progress", colliders[i].gameObject.GetComponent<MusicTrigger>().progress);
                     else if (colliders[i].gameObject.tag == "music_trigger_wrong")
                         gameObject.GetComponent<FMODUnity.StudioEventEmitter>().SetParameter("WRONG WAY", colliders[i].gameObject.GetComponent<MusicWRONG>().wrongWay);
@@ -172,7 +185,9 @@ namespace UnityStandardAssets._2D
                     }
                     else if (colliders[i].gameObject.tag == "spikes" && !GetComponents<AudioSource>()[3].isPlaying)
                     {
-                        GetComponents<AudioSource>()[3].Play();
+                        StopAndNormalise();
+                        audioSource.clip = painSound;
+                        audioSource.Play();
                         takenDamage = true;
                     }
 
@@ -229,8 +244,11 @@ namespace UnityStandardAssets._2D
         {
             if (collision.gameObject.tag == "portal")
             {
-                if (GetComponents<AudioSource>()[2].isPlaying == false)
-                    GetComponents<AudioSource>()[2].Play();
+                if (externAudioSource.isPlaying == false)
+                {
+                    externAudioSource.clip = portalSound;
+                    externAudioSource.Play();
+                }
             }
 
             if (collision.gameObject.tag == "win")
@@ -253,7 +271,9 @@ namespace UnityStandardAssets._2D
                     GameObject.Find("Information").GetComponent<information>().finishedRuch = 2;
                 }
 
-                GetComponents<AudioSource>()[2].Play();
+                StopAndNormalise();
+                audioSource.clip = winSound;
+                audioSource.Play();
                 finishedLevel = true;
 
             }
@@ -268,11 +288,12 @@ namespace UnityStandardAssets._2D
             if (switchControls)
                 move = -move;
 
-            if (move != 0f && !jump && GetComponent<AudioSource>().isPlaying == false && m_Grounded)
+            if (move != 0f && !jump && audioSource.isPlaying == false && m_Grounded)
             {
-                GetComponent<AudioSource>().volume = UnityEngine.Random.Range(0.3f, 0.6f);
-                GetComponent<AudioSource>().pitch = UnityEngine.Random.Range(0.8f, 1.1f);
-                GetComponent<AudioSource>().Play();
+                audioSource.volume = UnityEngine.Random.Range(0.3f, 0.6f);
+                audioSource.pitch = UnityEngine.Random.Range(0.8f, 1.1f);
+                audioSource.clip = walkSound;
+                audioSource.Play();
             }
 
             // If crouching, check to see if the character can stand up
@@ -317,9 +338,10 @@ namespace UnityStandardAssets._2D
             if (m_Grounded && jump && m_Anim.GetBool("Ground"))
             {
                 // Add Jump sound
-                GetComponents<AudioSource>()[1].volume = UnityEngine.Random.Range(0.15f, 0.5f);
-                GetComponents<AudioSource>()[1].pitch = UnityEngine.Random.Range(1.1f, 1.6f);
-                GetComponents<AudioSource>()[1].Play();
+                audioSource.volume = UnityEngine.Random.Range(0.15f, 0.5f);
+                audioSource.pitch = UnityEngine.Random.Range(1.1f, 1.6f);
+                audioSource.clip = jumpSound;
+                audioSource.Play();
                 // Add a vertical force to the player.
                 m_Grounded = false;
                 m_Anim.SetBool("Ground", false);
@@ -349,8 +371,12 @@ namespace UnityStandardAssets._2D
             if (!takenDamage)
                 countdown2 = 0.9f;
             takenDamage = true;
-            if (!GetComponents<AudioSource>()[4].isPlaying)
-                GetComponents<AudioSource>()[4].Play();
+            if (!audioSource.isPlaying)
+            {
+                StopAndNormalise();
+                audioSource.clip = screamSound;
+                audioSource.Play();
+            }
         }
 
         public void WinScene()
@@ -363,6 +389,13 @@ namespace UnityStandardAssets._2D
                 SceneManager.LoadScene("Ruch_cutscena");
             else if (SceneManager.GetActiveScene().name == "Sluch_Level")
                 SceneManager.LoadScene("Sluch_cutscena");
+        }
+
+        private void StopAndNormalise()
+        {
+            audioSource.Stop();
+            audioSource.pitch = 1f;
+            audioSource.volume = 0.5f;
         }
     }
 }

@@ -22,7 +22,7 @@ public class MovePrologue : MonoBehaviour
 
 
         time += Time.deltaTime;
-        if (time > 13f && edgeVisiblePositionRight >= cam.transform.position.x)
+        if (time > 13f && edgeVisiblePositionRight - 0.1f >= cam.transform.position.x)
         {
             gameObject.transform.position = new Vector3(gameObject.transform.position.x - 9f * Time.deltaTime, gameObject.transform.position.y, gameObject.transform.position.z);
 
