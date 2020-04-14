@@ -13,6 +13,11 @@ public class GameMaster : MonoBehaviour
     public bool tutorial;
     public static bool staticTutorial;
 
+    private void Awake()
+    {
+        playerLife = 3;
+    }
+
     private void Start()
     {
         if (gm == null)

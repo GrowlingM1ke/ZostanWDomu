@@ -138,7 +138,7 @@ namespace UnityStandardAssets._2D
 
             }
 
-                if (finishedLevel)
+            if (finishedLevel)
             {
                 countdown -= Time.deltaTime;
                 if (countdown < 0)
@@ -153,6 +153,7 @@ namespace UnityStandardAssets._2D
                 if (countdown2 < 0)
                 {
                     GameMaster.KillPlayer(gameObject.GetComponent<Player>());
+                    countdown2 = 0.3f;
                 }
             }
 

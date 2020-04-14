@@ -9,7 +9,9 @@ public class LifeBar : MonoBehaviour
 
     private void Awake()
     {
-        brain = GameObject.Find("Main Camera").transform.Find("LifeBar") as Transform;
+        brain = gameObject.transform.Find("LifeBar") as Transform;
+        if (brain == null)
+            Debug.LogError("Couldn't find lifebar transform");
 
     }
 
