@@ -184,7 +184,7 @@ namespace UnityStandardAssets._2D
                             healthbar.gameObject.GetComponent<HealthBar>().setHealth(stamina);
                         }
                     }
-                    else if (colliders[i].gameObject.tag == "spikes" && !GetComponents<AudioSource>()[3].isPlaying)
+                    else if (colliders[i].gameObject.tag == "spikes")
                     {
                         StopAndNormalise();
                         audioSource.clip = painSound;
