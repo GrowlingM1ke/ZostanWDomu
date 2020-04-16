@@ -172,10 +172,6 @@ namespace UnityStandardAssets._2D
                     m_Grounded = true;
                     if (colliders[i].gameObject.tag == "brain_trigger")
                         m_brain_trigger = true;
-                    else if (colliders[i].gameObject.tag == "music_trigger") 
-                        gameObject.GetComponent<FMODUnity.StudioEventEmitter>().SetParameter("Progress", colliders[i].gameObject.GetComponent<MusicTrigger>().progress);
-                    else if (colliders[i].gameObject.tag == "music_trigger_wrong")
-                        gameObject.GetComponent<FMODUnity.StudioEventEmitter>().SetParameter("WRONG WAY", colliders[i].gameObject.GetComponent<MusicWRONG>().wrongWay);
                     else if (colliders[i].gameObject.tag == "platform")
                     {
                         if (colliders[i].gameObject.GetComponent<PlatformTouch>() != null)
@@ -250,9 +246,15 @@ namespace UnityStandardAssets._2D
                     externAudioSource.clip = portalSound;
                     externAudioSource.Play();
                 }
+            } 
+            else if (collision.gameObject.tag == "music_trigger")
+            {
+                GameObject.Find("_GM").GetComponent<FMODUnity.StudioEventEmitter>().SetParameter("Progress", collision.gameObject.GetComponent<MusicTrigger>().progress);
+                Debug.LogError("Dupa2");
             }
-
-            if (collision.gameObject.tag == "win")
+            else if (collision.gameObject.tag == "music_trigger_wrong")
+                GameObject.Find("_GM").GetComponent<FMODUnity.StudioEventEmitter>().SetParameter("WRONG WAY", collision.gameObject.GetComponent<MusicWRONG>().wrongWay);
+            else if (collision.gameObject.tag == "win")
             {
                 if (SceneManager.GetActiveScene().name == "Sluch_Level")
                 {

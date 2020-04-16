@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 using UnityEngine.SceneManagement;
+using FMODUnity;
 
 public class GameMaster : MonoBehaviour
 {
@@ -35,6 +36,7 @@ public class GameMaster : MonoBehaviour
     public Transform spawnPrefab;
     public Transform[] enemies;
     public bool sluch = false;
+
 
     public IEnumerator RespawnPlayer()
     {
