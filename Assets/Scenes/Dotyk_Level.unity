@@ -10073,6 +10073,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2254814760345106909, guid: b4b7a2ac9b593fe4fbfdf05d420f01d7,
+        type: 3}
+      propertyPath: screamSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 8e0205280eb7eb24498d870edab939ca, type: 3}
+    - target: {fileID: 2254814760345106909, guid: b4b7a2ac9b593fe4fbfdf05d420f01d7,
+        type: 3}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 98913629cdb459948949aeb456adeb56, type: 3}
     - target: {fileID: 2591407681871584262, guid: b4b7a2ac9b593fe4fbfdf05d420f01d7,
         type: 3}
       propertyPath: m_AnchorMax.x

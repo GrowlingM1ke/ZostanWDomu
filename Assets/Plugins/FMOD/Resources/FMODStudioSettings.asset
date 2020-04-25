@@ -15,8 +15,8 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../../Fmod/Zostan w domu/Zostan w domu.fspro
-  sourceBankPath: ..\..\Fmod\Zostan w domu\Build
+  sourceProjectPath: ../../FMOD_projects/Zostan w domu/Zostan w domu.fspro
+  sourceBankPath: ..\..\FMOD_projects\Zostan w domu\Build
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
   BankLoadType: 0

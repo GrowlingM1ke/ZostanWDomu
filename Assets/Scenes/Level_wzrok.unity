@@ -32245,6 +32245,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5990552207286610705, guid: a12adfbbacb11c64c9fe2c9256fa6251,
+        type: 3}
+      propertyPath: screamSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 8e0205280eb7eb24498d870edab939ca, type: 3}
+    - target: {fileID: 5990552207286610705, guid: a12adfbbacb11c64c9fe2c9256fa6251,
+        type: 3}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 98913629cdb459948949aeb456adeb56, type: 3}
     - target: {fileID: 5990552207286610735, guid: a12adfbbacb11c64c9fe2c9256fa6251,
         type: 3}
       propertyPath: m_Name

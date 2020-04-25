@@ -5469,5 +5469,15 @@ PrefabInstance:
       propertyPath: info
       value: 
       objectReference: {fileID: 2126335833}
+    - target: {fileID: 8154573185908059368, guid: f85a43ad0c7293f4f8ad77683b00f4cb,
+        type: 3}
+      propertyPath: screamSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 8e0205280eb7eb24498d870edab939ca, type: 3}
+    - target: {fileID: 8154573185908059368, guid: f85a43ad0c7293f4f8ad77683b00f4cb,
+        type: 3}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 98913629cdb459948949aeb456adeb56, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f85a43ad0c7293f4f8ad77683b00f4cb, type: 3}
