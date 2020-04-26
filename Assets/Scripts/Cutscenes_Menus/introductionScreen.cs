@@ -9,7 +9,7 @@ public class introductionScreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Space))
         {
             DontDestroyOnLoad(music);
             SceneManager.LoadScene("Main_Menu");

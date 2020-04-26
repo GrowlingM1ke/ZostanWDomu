@@ -25,6 +25,9 @@ namespace UnityStandardAssets._2D
         public AudioClip walkSound;
         public AudioClip portalSound;
         public AudioClip winSound;
+        public FMODUnity.StudioEventEmitter studioEventWalking;
+        private FMODUnity.StudioEventEmitter studioEventEmitter;
+        FMOD.Studio.EventInstance musicEvent;
 
 
         private Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
@@ -62,6 +65,7 @@ namespace UnityStandardAssets._2D
             if (GameObject.FindGameObjectWithTag("brain") != null)
                 b_Anim = GameObject.FindGameObjectWithTag("brain").gameObject.GetComponent<Animator>();
 
+            studioEventEmitter = GameObject.Find("_GM").GetComponent<FMODUnity.StudioEventEmitter>();
         }
 
         public void Start()
@@ -78,6 +82,8 @@ namespace UnityStandardAssets._2D
                     portal.GetComponent<BoxCollider2D>().enabled = true;
                 }
             }
+            musicEvent = studioEventEmitter.EventInstance;
+            musicEvent.setParameterByName("WRONG WAY", 0);
         }
 
         private void Update()
@@ -180,10 +186,11 @@ namespace UnityStandardAssets._2D
                             healthbar.gameObject.GetComponent<HealthBar>().setHealth(stamina);
                         }
                     }
-                    else if (colliders[i].gameObject.tag == "spikes")
+                    else if (colliders[i].gameObject.tag == "spikes" && !takenDamage)
                     {
                         StopAndNormalise();
                         audioSource.clip = painSound;
+                        audioSource.volume = 1;
                         audioSource.Play();
                         takenDamage = true;
                     }
@@ -223,11 +230,57 @@ namespace UnityStandardAssets._2D
             }
         }
 
+        private float ConvertRange(float originalStart, float originalEnd, float newStart, float newEnd, float value)
+        {
+            float scale = (float)(newEnd - newStart) / (originalEnd - originalStart);
+            return (float)(newStart + ((value - originalStart) * scale));
+        }
+
+        private IEnumerator GoTowards(float target)
+        {
+            float currentValue;
+            musicEvent.getParameterByName("WRONG WAY", out currentValue);
+            if(target < currentValue)
+            {
+                while (target < currentValue)
+                {
+                    currentValue -= 0.5f;
+                    musicEvent.setParameterByName("WRONG WAY", currentValue);
+                    yield return null;
+                }
+            }
+            else if (target > currentValue)
+            {
+                while (target > currentValue)
+                {
+                    currentValue += 0.5f;
+                    musicEvent.setParameterByName("WRONG WAY", currentValue);
+                    yield return null;
+                }
+            }
+        }
+
         private void OnTriggerStay2D(Collider2D collision)
         {
             if (collision.gameObject.tag == "portal")
             {
                 changeScene = collision.gameObject.name;
+            }
+            else if (collision.gameObject.tag == "music_trigger_wrong")
+            {
+                float left = collision.bounds.center.x + collision.bounds.extents.x;
+                float right = collision.bounds.center.x - collision.bounds.extents.x;
+
+
+                float x = this.transform.position.x;
+
+                float convertedX;
+                if (collision.gameObject.GetComponent<MusicWRONG>().right)
+                    convertedX = ConvertRange(left, right, 0, 100, x);
+                else
+                    convertedX = ConvertRange(left, right, 100, 0, x);
+                studioEventEmitter.SetParameter("WRONG WAY", convertedX);
+
             }
         }
 
@@ -235,6 +288,11 @@ namespace UnityStandardAssets._2D
         {
             if (collision.gameObject.tag == "portal")
                 changeScene = null;
+            else if (collision.gameObject.tag == "music_trigger_wrong")
+            {
+                StopCoroutine("GoTowards");
+                StartCoroutine("GoTowards", 0);
+            }
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
@@ -246,14 +304,11 @@ namespace UnityStandardAssets._2D
                     externAudioSource.clip = portalSound;
                     externAudioSource.Play();
                 }
-            } 
+            }
             else if (collision.gameObject.tag == "music_trigger")
             {
                 GameObject.Find("_GM").GetComponent<FMODUnity.StudioEventEmitter>().SetParameter("Progress", collision.gameObject.GetComponent<MusicTrigger>().progress);
-                Debug.LogError("Dupa2");
             }
-            else if (collision.gameObject.tag == "music_trigger_wrong")
-                GameObject.Find("_GM").GetComponent<FMODUnity.StudioEventEmitter>().SetParameter("WRONG WAY", collision.gameObject.GetComponent<MusicWRONG>().wrongWay);
             else if (collision.gameObject.tag == "win")
             {
                 if (SceneManager.GetActiveScene().name == "Sluch_Level")
@@ -291,12 +346,13 @@ namespace UnityStandardAssets._2D
             if (switchControls)
                 move = -move;
 
-            if (move != 0f && !jump && audioSource.isPlaying == false && m_Grounded)
+            if (move != 0f && !jump && !studioEventWalking.IsPlaying() && m_Grounded)
             {
-                audioSource.volume = UnityEngine.Random.Range(0.3f, 0.6f);
-                audioSource.pitch = UnityEngine.Random.Range(0.8f, 1.1f);
-                audioSource.clip = walkSound;
-                audioSource.Play();
+                studioEventWalking.Play();
+                //audioSource.volume = UnityEngine.Random.Range(0.3f, 0.6f);
+                //audioSource.pitch = UnityEngine.Random.Range(0.8f, 1.1f);
+                //audioSource.clip = walkSound;
+                //audioSource.Play();
             }
 
             // If crouching, check to see if the character can stand up

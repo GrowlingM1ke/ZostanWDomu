@@ -28,7 +28,7 @@ public class MovePrologue : MonoBehaviour
 
         }
 
-        if (time > 30 || Input.GetKeyDown(KeyCode.Mouse0))
+        if (time > 30 || Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Space))
             SceneManager.LoadScene("Tutorial_scene");
 
     }

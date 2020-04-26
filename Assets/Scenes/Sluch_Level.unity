@@ -1859,7 +1859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorial: 0
-  playerPrefab: {fileID: 1518648597403854305, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
+  playerPrefab: {fileID: 2158844751987070447, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
     type: 3}
   spawnPoint: {fileID: 606338058}
   spawnDelay: 2
@@ -2254,6 +2254,7 @@ GameObject:
   m_Component:
   - component: {fileID: 165950903}
   - component: {fileID: 165950902}
+  - component: {fileID: 165950904}
   m_Layer: 0
   m_Name: bg_05
   m_TagString: Untagged
@@ -2326,6 +2327,24 @@ Transform:
   m_Father: {fileID: 1894240075}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &165950904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165950901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cd8e3844293929498daf794861f05ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 4
+  hasARightBuddy: 0
+  hasALeftBuddy: 0
+  hasAUpBuddy: 0
+  hasADownBuddy: 0
+  reverseScale: 1
 --- !u!1 &215901962
 GameObject:
   m_ObjectHideFlags: 0
@@ -3824,7 +3843,6 @@ GameObject:
   m_Component:
   - component: {fileID: 388792473}
   - component: {fileID: 388792476}
-  - component: {fileID: 388792475}
   - component: {fileID: 388792474}
   m_Layer: 8
   m_Name: Wrong 5
@@ -3856,39 +3874,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 388792472}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Script: {fileID: 11500000, guid: 50695a4782bbe964a8a49e74cbb9c8fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollisionTag: Player
-  Emitters:
-  - Target: {fileID: 140429022}
-    Params: []
-  TriggerEvent: 3
---- !u!114 &388792475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 388792472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: Player
-  Event: event:/Music SLUCH
-  PlayEvent: 3
-  StopEvent: 4
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params:
-  - Name: WRONG WAY
-    Value: 0
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
+  right: 0
 --- !u!61 &388792476
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4135,9 +4124,9 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!4 &432865780 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 1518648597403854305, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
+  m_CorrespondingSourceObject: {fileID: 2158844751987070447, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
     type: 3}
-  m_PrefabInstance: {fileID: 1518648597542593557}
+  m_PrefabInstance: {fileID: 2158844752377336859}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &436961509
 GameObject:
@@ -4500,6 +4489,7 @@ GameObject:
   m_Component:
   - component: {fileID: 483198092}
   - component: {fileID: 483198091}
+  - component: {fileID: 483198093}
   m_Layer: 0
   m_Name: bg_03
   m_TagString: Untagged
@@ -4571,6 +4561,24 @@ Transform:
   m_Father: {fileID: 1844089531}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &483198093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483198090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cd8e3844293929498daf794861f05ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 4
+  hasARightBuddy: 0
+  hasALeftBuddy: 0
+  hasAUpBuddy: 0
+  hasADownBuddy: 0
+  reverseScale: 1
 --- !u!1 &504328490
 GameObject:
   m_ObjectHideFlags: 0
@@ -7054,6 +7062,7 @@ GameObject:
   m_Component:
   - component: {fileID: 833586162}
   - component: {fileID: 833586161}
+  - component: {fileID: 833586163}
   m_Layer: 0
   m_Name: bg_06
   m_TagString: Untagged
@@ -7126,6 +7135,24 @@ Transform:
   m_Father: {fileID: 475417828}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &833586163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833586160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cd8e3844293929498daf794861f05ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 4
+  hasARightBuddy: 0
+  hasALeftBuddy: 0
+  hasAUpBuddy: 0
+  hasADownBuddy: 0
+  reverseScale: 1
 --- !u!1 &840290296
 GameObject:
   m_ObjectHideFlags: 0
@@ -7265,6 +7292,7 @@ GameObject:
   m_Component:
   - component: {fileID: 858638138}
   - component: {fileID: 858638137}
+  - component: {fileID: 858638139}
   m_Layer: 0
   m_Name: bg_04
   m_TagString: Untagged
@@ -7337,6 +7365,24 @@ Transform:
   m_Father: {fileID: 864483134}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.314}
+--- !u!114 &858638139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858638136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cd8e3844293929498daf794861f05ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 4
+  hasARightBuddy: 0
+  hasALeftBuddy: 0
+  hasAUpBuddy: 0
+  hasADownBuddy: 0
+  reverseScale: 1
 --- !u!1 &864483133
 GameObject:
   m_ObjectHideFlags: 0
@@ -7378,7 +7424,6 @@ GameObject:
   m_Component:
   - component: {fileID: 866387256}
   - component: {fileID: 866387259}
-  - component: {fileID: 866387258}
   - component: {fileID: 866387257}
   m_Layer: 8
   m_Name: Wrong 7
@@ -7399,7 +7444,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1743930660}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &866387257
 MonoBehaviour:
@@ -7410,39 +7455,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 866387255}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Script: {fileID: 11500000, guid: 50695a4782bbe964a8a49e74cbb9c8fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollisionTag: Player
-  Emitters:
-  - Target: {fileID: 140429022}
-    Params: []
-  TriggerEvent: 3
---- !u!114 &866387258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866387255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: Player
-  Event: event:/Music SLUCH
-  PlayEvent: 3
-  StopEvent: 4
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params:
-  - Name: WRONG WAY
-    Value: 0
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
+  right: 0
 --- !u!60 &866387259
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -8937,7 +8953,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1013781211}
   - component: {fileID: 1013781214}
-  - component: {fileID: 1013781213}
   - component: {fileID: 1013781212}
   m_Layer: 8
   m_Name: Wrong 3
@@ -8969,39 +8984,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1013781210}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Script: {fileID: 11500000, guid: 50695a4782bbe964a8a49e74cbb9c8fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollisionTag: Player
-  Emitters:
-  - Target: {fileID: 140429022}
-    Params: []
-  TriggerEvent: 3
---- !u!114 &1013781213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1013781210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: Player
-  Event: event:/Music SLUCH
-  PlayEvent: 3
-  StopEvent: 4
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params:
-  - Name: WRONG WAY
-    Value: 0
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
+  right: 1
 --- !u!61 &1013781214
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9912,25 +9898,6 @@ Transform:
   m_Father: {fileID: 297332211}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1168213879 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1518648596410211648, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1518648597542593557}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1168213889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1168213879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ListenerNumber: -1
 --- !u!1 &1184440200
 GameObject:
   m_ObjectHideFlags: 0
@@ -11235,7 +11202,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1356950163}
   - component: {fileID: 1356950166}
-  - component: {fileID: 1356950165}
   - component: {fileID: 1356950164}
   m_Layer: 8
   m_Name: Wrong 4
@@ -11267,39 +11233,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1356950162}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Script: {fileID: 11500000, guid: 50695a4782bbe964a8a49e74cbb9c8fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollisionTag: Player
-  Emitters:
-  - Target: {fileID: 140429022}
-    Params: []
-  TriggerEvent: 3
---- !u!114 &1356950165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1356950162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: Player
-  Event: event:/Music SLUCH
-  PlayEvent: 3
-  StopEvent: 4
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params:
-  - Name: WRONG WAY
-    Value: 0
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
+  right: 0
 --- !u!61 &1356950166
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13154,7 +13091,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1707126785}
   - component: {fileID: 1707126788}
-  - component: {fileID: 1707126787}
   - component: {fileID: 1707126786}
   m_Layer: 8
   m_Name: Wrong 2
@@ -13186,39 +13122,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1707126784}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Script: {fileID: 11500000, guid: 50695a4782bbe964a8a49e74cbb9c8fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollisionTag: Player
-  Emitters:
-  - Target: {fileID: 140429022}
-    Params: []
-  TriggerEvent: 3
---- !u!114 &1707126787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1707126784}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: Player
-  Event: event:/Music SLUCH
-  PlayEvent: 3
-  StopEvent: 4
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params:
-  - Name: WRONG WAY
-    Value: 0
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
+  right: 1
 --- !u!61 &1707126788
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13255,8 +13162,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1721862849}
   - component: {fileID: 1721862852}
-  - component: {fileID: 1721862851}
-  - component: {fileID: 1721862850}
+  - component: {fileID: 1721862853}
   m_Layer: 8
   m_Name: Wrong 1
   m_TagString: music_trigger_wrong
@@ -13278,48 +13184,6 @@ Transform:
   m_Father: {fileID: 1743930660}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1721862850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1721862848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: Player
-  Emitters:
-  - Target: {fileID: 140429022}
-    Params: []
-  TriggerEvent: 3
---- !u!114 &1721862851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1721862848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: Player
-  Event: event:/Music SLUCH
-  PlayEvent: 3
-  StopEvent: 4
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params:
-  - Name: WRONG WAY
-    Value: 0
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
 --- !u!61 &1721862852
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13346,6 +13210,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 76.80301, y: 6.3042336}
   m_EdgeRadius: 0
+--- !u!114 &1721862853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721862848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50695a4782bbe964a8a49e74cbb9c8fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  right: 1
 --- !u!1 &1728112000
 GameObject:
   m_ObjectHideFlags: 0
@@ -13705,7 +13582,6 @@ Transform:
   - {fileID: 1013781211}
   - {fileID: 1356950163}
   - {fileID: 388792473}
-  - {fileID: 2063742430}
   - {fileID: 866387256}
   m_Father: {fileID: 0}
   m_RootOrder: 9
@@ -16189,107 +16065,6 @@ Transform:
   m_Father: {fileID: 297332211}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2063742429
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2063742430}
-  - component: {fileID: 2063742433}
-  - component: {fileID: 2063742432}
-  - component: {fileID: 2063742431}
-  m_Layer: 8
-  m_Name: Wrong 6
-  m_TagString: music_trigger_wrong
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2063742430
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2063742429}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 177.4, y: 30.4, z: -108.36456}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1743930660}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2063742431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2063742429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: Player
-  Emitters:
-  - Target: {fileID: 140429022}
-    Params: []
-  TriggerEvent: 3
---- !u!114 &2063742432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2063742429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: Player
-  Event: event:/Music SLUCH
-  PlayEvent: 3
-  StopEvent: 4
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params:
-  - Name: WRONG WAY
-    Value: 0
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
---- !u!61 &2063742433
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2063742429}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -24.752808, y: 6.6762486}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 25.154175, y: 16.076374}
-  m_EdgeRadius: 0
 --- !u!1 &2071732954
 GameObject:
   m_ObjectHideFlags: 0
@@ -16300,6 +16075,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2071732956}
   - component: {fileID: 2071732955}
+  - component: {fileID: 2071732957}
   m_Layer: 0
   m_Name: bg_01
   m_TagString: Untagged
@@ -16372,6 +16148,24 @@ Transform:
   m_Father: {fileID: 796557960}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2071732957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071732954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cd8e3844293929498daf794861f05ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 4
+  hasARightBuddy: 0
+  hasALeftBuddy: 0
+  hasAUpBuddy: 0
+  hasADownBuddy: 0
+  reverseScale: 1
 --- !u!1 &2071946474
 GameObject:
   m_ObjectHideFlags: 0
@@ -16403,117 +16197,72 @@ Transform:
   m_Father: {fileID: 724007429}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1518648597542593557
+--- !u!1001 &2158844752377336859
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1518648596410211648, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
-        type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 1518648596410211651, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1518648596410211651, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
-        type: 3}
-      propertyPath: m_Volume
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1518648596410211651, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
-        type: 3}
-      propertyPath: m_Pitch
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1518648596410211662, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
-        type: 3}
-      propertyPath: staminaRuch
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1518648596410211662, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
-        type: 3}
-      propertyPath: _gm
-      value: 
-      objectReference: {fileID: 140429018}
-    - target: {fileID: 1518648596410211662, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
-        type: 3}
-      propertyPath: walkSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 1035d0e0f10d11344b586a867f908ec3, type: 3}
-    - target: {fileID: 1518648596410211662, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
-        type: 3}
-      propertyPath: screamSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 8e0205280eb7eb24498d870edab939ca, type: 3}
-    - target: {fileID: 1518648596410211662, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
-        type: 3}
-      propertyPath: jumpSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 98913629cdb459948949aeb456adeb56, type: 3}
-    - target: {fileID: 1518648596410211662, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
-        type: 3}
-      propertyPath: portalSound
-      value: 
-      objectReference: {fileID: 8300000, guid: d3d58fb8fe0295f40843be506c27fb9d, type: 3}
-    - target: {fileID: 1518648597403854305, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
+    - target: {fileID: 2158844751987070447, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.6
       objectReference: {fileID: 0}
-    - target: {fileID: 1518648597403854305, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
+    - target: {fileID: 2158844751987070447, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -2
       objectReference: {fileID: 0}
-    - target: {fileID: 1518648597403854305, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
+    - target: {fileID: 2158844751987070447, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1518648597403854305, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
+    - target: {fileID: 2158844751987070447, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
         type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 1518648597403854305, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
+    - target: {fileID: 2158844751987070447, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
         type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 1518648597403854305, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
+    - target: {fileID: 2158844751987070447, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 1518648597403854305, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
+    - target: {fileID: 2158844751987070447, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1518648597403854305, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
+    - target: {fileID: 2158844751987070447, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
         type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1518648597403854305, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
+    - target: {fileID: 2158844751987070447, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1518648597403854305, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
+    - target: {fileID: 2158844751987070447, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1518648597403854305, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
+    - target: {fileID: 2158844751987070447, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2158844753390293868, guid: 0e3d316aeb63d7343aaae48b84d5ec4d,
+        type: 3}
+      propertyPath: m_Name
+      value: Player_Sluch
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e3d316aeb63d7343aaae48b84d5ec4d, type: 3}

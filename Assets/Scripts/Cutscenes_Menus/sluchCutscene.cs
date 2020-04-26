@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class sluchCutscene : MonoBehaviour
 {
-    private void FixedUpdate()
+    private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Space))
             SceneManager.LoadScene("Tutorial_scene");
     }
 }

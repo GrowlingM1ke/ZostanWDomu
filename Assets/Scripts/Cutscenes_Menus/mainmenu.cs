@@ -8,6 +8,7 @@ public class mainmenu : MonoBehaviour
 {
     public Sprite first;
     public Sprite second;
+    public AudioSource audio;
     int state = 1;
 
     // Update is called once per frame
@@ -29,13 +30,20 @@ public class mainmenu : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse0) == true && state == 2)
         {
-            Destroy(GameObject.Find("Muzyka"));
-            SceneManager.LoadScene("Prolog _cutscena");
+            StartCoroutine(click());
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
+        }
+
+        IEnumerator click()
+        {
+            audio.Play();
+            yield return new WaitWhile(() => audio.isPlaying);
+            Destroy(GameObject.Find("Muzyka"));
+            SceneManager.LoadScene("Prolog _cutscena");
         }
 
 
