@@ -17,6 +17,7 @@ TagManager:
   - spikes
   - finalDoor
   - portal
+  - checkpoint
   layers:
   - Default
   - TransparentFX

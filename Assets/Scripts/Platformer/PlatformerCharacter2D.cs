@@ -26,6 +26,7 @@ namespace UnityStandardAssets._2D
         public AudioClip portalSound;
         public AudioClip winSound;
         public FMODUnity.StudioEventEmitter studioEventWalking;
+        public FMODUnity.StudioEventEmitter studioEventMusic;
         private FMODUnity.StudioEventEmitter studioEventEmitter;
         FMOD.Studio.EventInstance musicEvent;
 
@@ -50,6 +51,9 @@ namespace UnityStandardAssets._2D
         private bool takenDamage = false;
         public float countdown = 0.7f;
         public float countdown2 = 0.3f;
+        private bool beganSceneChange = false;
+        private string targetScene;
+        public GameMaster gm;
 
         private Transform playerGraphics;	// Reference to the graphics so we can change direction
 
@@ -86,39 +90,55 @@ namespace UnityStandardAssets._2D
             musicEvent.setParameterByName("WRONG WAY", 0);
         }
 
+        private IEnumerator ChangeScene()
+        {
+
+            studioEventMusic.EventInstance.setVolume(0.25f);
+            externAudioSource.clip = portalSound;
+            externAudioSource.Play();
+            while (externAudioSource.isPlaying)
+                yield return null;
+            if (targetScene == "Portal_sluch")
+            {
+                DontDestroyOnLoad(info);
+                SceneManager.LoadScene("Sluch_Level");
+            }
+            else if (targetScene == "Portal_dotyk")
+            {
+                DontDestroyOnLoad(info);
+                SceneManager.LoadScene("Dotyk_Level");
+            }
+
+            else if (targetScene == "Portal_wzrok")
+            {
+                DontDestroyOnLoad(info);
+                SceneManager.LoadScene("Level_wzrok");
+            }
+            else if (targetScene == "Portal_ruch")
+            {
+                DontDestroyOnLoad(info);
+                SceneManager.LoadScene("Ruch_Level");
+            }
+            else if (targetScene == "FINAL PORTAL")
+            {
+                DontDestroyOnLoad(info);
+                SceneManager.LoadScene("Ending_cutscena");
+            }
+
+        }
+
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
             {
                 if (changeScene != null)
                 {
-                    if (changeScene == "Portal_sluch")
+                    if (!beganSceneChange)
                     {
-                        DontDestroyOnLoad(info);
-                        SceneManager.LoadScene("Sluch_Level");
+                        targetScene = changeScene;
+                        StartCoroutine(ChangeScene());
                     }
-                    else if (changeScene == "Portal_dotyk")
-                    {
-                        DontDestroyOnLoad(info);
-                        SceneManager.LoadScene("Dotyk_Level");
-                    }
-
-                    else if (changeScene == "Portal_wzrok")
-                    {
-                        DontDestroyOnLoad(info);
-                        SceneManager.LoadScene("Level_wzrok");
-                    }
-                    else if (changeScene == "Portal_ruch")
-                    {
-                        DontDestroyOnLoad(info);
-                        SceneManager.LoadScene("Ruch_Level");
-                    }
-                    else if (changeScene == "FINAL PORTAL")
-                    {
-                        DontDestroyOnLoad(info);
-                        SceneManager.LoadScene("Ending_cutscena");
-                    }
-
+                    beganSceneChange = true;
                 }
             }
 
@@ -190,7 +210,6 @@ namespace UnityStandardAssets._2D
                     {
                         StopAndNormalise();
                         audioSource.clip = painSound;
-                        audioSource.volume = 1;
                         audioSource.Play();
                         takenDamage = true;
                     }
@@ -297,15 +316,7 @@ namespace UnityStandardAssets._2D
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.gameObject.tag == "portal")
-            {
-                if (externAudioSource.isPlaying == false)
-                {
-                    externAudioSource.clip = portalSound;
-                    externAudioSource.Play();
-                }
-            }
-            else if (collision.gameObject.tag == "music_trigger")
+            if (collision.gameObject.tag == "music_trigger")
             {
                 GameObject.Find("_GM").GetComponent<FMODUnity.StudioEventEmitter>().SetParameter("Progress", collision.gameObject.GetComponent<MusicTrigger>().progress);
             }
@@ -334,6 +345,10 @@ namespace UnityStandardAssets._2D
                 audioSource.Play();
                 finishedLevel = true;
 
+            }
+            else if (collision.gameObject.tag == "checkpoint")
+            {
+                gm.spawnPoint.transform.position  = collision.transform.position;
             }
         }
 

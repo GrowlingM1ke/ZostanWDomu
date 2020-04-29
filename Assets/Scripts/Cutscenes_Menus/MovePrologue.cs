@@ -9,6 +9,7 @@ public class MovePrologue : MonoBehaviour
     float spriteWidth;
     float spriteHeight;
     public RectTransform rt;
+    private bool startedCoroutine = false;
 
 
 
@@ -29,7 +30,19 @@ public class MovePrologue : MonoBehaviour
         }
 
         if (time > 30 || Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Space))
-            SceneManager.LoadScene("Tutorial_scene");
+        {
+            if (!startedCoroutine)
+                StartCoroutine(waitForBanks());
+        }
+            
 
+    }
+
+    private IEnumerator waitForBanks()
+    {
+        startedCoroutine = true;
+        while (!FMODUnity.RuntimeManager.HasBanksLoaded)
+            yield return null;
+        SceneManager.LoadScene("Tutorial_scene");
     }
 }
