@@ -26,7 +26,6 @@ namespace UnityStandardAssets._2D
         public AudioClip portalSound;
         public AudioClip winSound;
         public FMODUnity.StudioEventEmitter studioEventWalking;
-        public FMODUnity.StudioEventEmitter studioEventMusic;
         private FMODUnity.StudioEventEmitter studioEventEmitter;
         FMOD.Studio.EventInstance musicEvent;
 
@@ -93,9 +92,10 @@ namespace UnityStandardAssets._2D
         private IEnumerator ChangeScene()
         {
 
-            studioEventMusic.EventInstance.setVolume(0.25f);
+            studioEventEmitter.EventInstance.setVolume(0.15f);
             externAudioSource.clip = portalSound;
             externAudioSource.Play();
+            externAudioSource.volume = 1;
             while (externAudioSource.isPlaying)
                 yield return null;
             if (targetScene == "Portal_sluch")

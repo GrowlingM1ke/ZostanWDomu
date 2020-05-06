@@ -1,5 +1,7 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityStandardAssets.CrossPlatformInput;
 
 namespace UnityStandardAssets._2D
 {
@@ -16,6 +18,7 @@ namespace UnityStandardAssets._2D
         private Vector3 m_LastTargetPosition;
         private Vector3 m_CurrentVelocity;
         private Vector3 m_LookAheadPos;
+        private bool lookingDown = false;
 
         float nextTimeToSearch = 0;
 
@@ -36,9 +39,23 @@ namespace UnityStandardAssets._2D
                 FindPlayer();
                 return;
             }
-                
+
+            if (SceneManager.GetActiveScene().name == "Level_wzrok")
+            {
+                if (CrossPlatformInputManager.GetButtonDown("down"))
+                    lookingDown = true;
+                if (CrossPlatformInputManager.GetButtonUp("down"))
+                    lookingDown = false;
+            }
+
+
+            Vector3 dest = target.position;
+
+            if (lookingDown)
+                dest = new Vector3(dest.x, dest.y - 5.0f, dest.z);
+
             // only update lookahead pos if accelerating or changed direction
-            float xMoveDelta = (target.position - m_LastTargetPosition).x;
+            float xMoveDelta = (dest - m_LastTargetPosition).x;
 
             bool updateLookAheadTarget = Mathf.Abs(xMoveDelta) > lookAheadMoveThreshold;
 
@@ -51,14 +68,14 @@ namespace UnityStandardAssets._2D
                 m_LookAheadPos = Vector3.MoveTowards(m_LookAheadPos, Vector3.zero, Time.deltaTime*lookAheadReturnSpeed);
             }
 
-            Vector3 aheadTargetPos = target.position + m_LookAheadPos + Vector3.forward*m_OffsetZ;
+            Vector3 aheadTargetPos = dest + m_LookAheadPos + Vector3.forward*m_OffsetZ;
             Vector3 newPos = Vector3.SmoothDamp(transform.position, aheadTargetPos, ref m_CurrentVelocity, damping);
 
             newPos = new Vector3(newPos.x, Mathf.Clamp(newPos.y, yPosBoundary, Mathf.Infinity), newPos.z);
 
             transform.position = newPos;
 
-            m_LastTargetPosition = target.position;
+            m_LastTargetPosition = dest;
         }
 
         void FindPlayer()

@@ -16,9 +16,7 @@ public class GameMaster : MonoBehaviour
 
     private void Awake()
     {
-        playerLife = 3;
-        if (SceneManager.GetActiveScene().name == "Level_wzrok")
-            playerLife += 3;
+        
     }
 
     private void Start()
@@ -30,6 +28,7 @@ public class GameMaster : MonoBehaviour
         if (!tutorial)
             LifeBar.SetLife(playerLife);
         staticTutorial = tutorial;
+        playerLife = 3;
     }
 
     public Transform playerPrefab;

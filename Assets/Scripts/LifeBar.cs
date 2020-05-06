@@ -12,6 +12,7 @@ public class LifeBar : MonoBehaviour
         brain = gameObject.transform.Find("LifeBar") as Transform;
         if (brain == null)
             Debug.LogError("Couldn't find lifebar transform");
+        brains.Clear();
 
     }
 
