@@ -5465,5 +5465,10 @@ PrefabInstance:
       propertyPath: studioEventMusic
       value: 
       objectReference: {fileID: 140429021}
+    - target: {fileID: 6568379247849497427, guid: f85a43ad0c7293f4f8ad77683b00f4cb,
+        type: 3}
+      propertyPath: portalSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 874f297d95c7b284586e2104da0a6c14, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f85a43ad0c7293f4f8ad77683b00f4cb, type: 3}

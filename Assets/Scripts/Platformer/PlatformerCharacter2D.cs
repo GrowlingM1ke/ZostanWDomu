@@ -92,7 +92,7 @@ namespace UnityStandardAssets._2D
         private IEnumerator ChangeScene()
         {
 
-            studioEventEmitter.EventInstance.setVolume(0.15f);
+            studioEventEmitter.EventInstance.setVolume(0.02f);
             externAudioSource.clip = portalSound;
             externAudioSource.Play();
             externAudioSource.volume = 1;
